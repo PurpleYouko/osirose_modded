@@ -140,5 +140,5 @@ void CMonster::AddDamage( CCharacter* enemy, long int hitpower)
 
 CDrop* CMonster::GetDrop( )
 {
-    return GServer->GetPYDrop( this, 1 );
+    return GServer->GetNewDrop( this );
 }

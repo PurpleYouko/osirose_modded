@@ -149,7 +149,8 @@ public:
     CDrop* GetDropByID( UINT id, UINT map=0 );
     CNPC* GetNPCByID( UINT id, UINT map=0 );
     CDrop* GetDrop( CMonster* thismon );
-    CDrop* GetPYDrop( CMonster* thismon, UINT droptype );
+    CDrop* GetPYDrop( CMonster* thismon, UINT droptype );	//no longer funtions in VC compiler 
+	CDrop* GetNewDrop ( CMonster* thismon );	//replaces with this from project 137
     void SendToAll( CPacket* pak );
     UINT GetNewClientID( );
     void DisconnectAll();
@@ -165,6 +166,16 @@ public:
     //------------------ Fairies ---------------------
     void DoFairyStuff( CPlayer* targetclient, int action );
     void DoFairyFree( int fairy );
+
+	// PY extra stats lookup
+    UINT GetExtraStats( UINT modifier );
+	UINT GetUStat( short modifier );
+	UINT GetUValue( short modifier, short stat );
+    // PY end
+
+	//atoi modifier (ServerFunctions.cpp )
+		UINT GetSafeAtoi( char *itmp );
+
 
     //------------------ MATH (extrafunctions.cpp)
     fPoint RandInCircle(fPoint center, float radius);
@@ -305,7 +316,8 @@ public:
     bool LoadDropsData( );
 
     bool LoadPYDropsData( );
-    bool LoadSkillBookDropsData( );
+	bool LoadNewDrops( );
+    //bool LoadSkillBookDropsData( );
     bool LoadConfig( );
 
     bool LoadStatusData( );
@@ -356,6 +368,9 @@ public:
     vector<CParty*>         PartyList;              // Party List
     vector<CFairy*>         FairyList;              // Fairy List
     std::map< unsigned, CNPCTrigger* >  NPCActionList;
+
+	//CExtraStats             StatLookup[301];        //PY: Item Stats
+    CExtraStats             StatLookup[MAX_EXTRA_STATS];        //PY: Item Stats
 
 
     CItemStas               StatsList[500];

@@ -537,7 +537,7 @@ void CCharacter::UseAtkSkill( CCharacter* Enemy, CSkills* skill, bool deBuff )
          hitpower2 += GServer->RandNumber(0,20);
     */
     //Skill power calculations - Pepu
-    long int skillpower = skill->atkpower + (long int)floor(GetInt( )/2);
+    long int skillpower = skill->atkpower + (long int)(GetInt( )/2);  //had to remove floor from this as it wouldn't compile
     long int level_diff = Stats->Level - Enemy->Stats->Level;
 
 

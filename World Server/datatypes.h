@@ -473,6 +473,8 @@
 
 #include "../common/sockets.h"
 
+#define MAX_EXTRA_STATS 302   //max stats (for Py's code).
+
 // Hold party experience when kill a moster
 struct CPartyExp
 {
@@ -668,6 +670,7 @@ struct CNPCData {
     UINT shp;
     UINT dialogid;
     UINT eventid;
+	UINT boss;
 
     UINT side;
     UINT sidechance;
@@ -703,7 +706,8 @@ struct CDropInfo
 // For store the drops info
 struct CMDrops
 {
-    UINT id;
+    /*
+	UINT id;
     UINT zuly;
     UINT zulyprob;
     vector<CDropInfo*> Drops;
@@ -718,6 +722,16 @@ struct CMDrops
     UINT itemtype;
     UINT itemnum;
     UINT alt[8];
+	UINT Dropid;
+	UINT TotalChance;
+	*/
+
+	UINT id;
+    UINT Dropid;
+    UINT item[100];
+    UINT chance[100];
+    dword RunningTotal[100];
+    dword TotalChance;
 
 };
 
@@ -810,6 +824,10 @@ public:
 	UINT    gem;
 	UINT    quality;
 	UINT    type;
+	UINT    raretype;
+
+	short	UStat[2];		//PY Unique stats that each item can have
+	short   UValue[2];		//PY The value in the unique stats
 };
 
 // -----------------------------------------------------------------------------------------
@@ -1173,6 +1191,14 @@ struct CItemStas
   UINT value[2];
 };
 
+//PY stat lookup table
+struct CExtraStats
+{
+	UINT id;
+	UINT statnumber;
+};
+ //PY end
+
 struct CFairy
 {
     UINT ListIndex;
@@ -1257,4 +1283,5 @@ struct SQuestData
 };
 
 #endif
+
 

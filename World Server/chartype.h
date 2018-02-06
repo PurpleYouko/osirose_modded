@@ -47,12 +47,70 @@ struct POSITION
 
 struct STATS
 {
-    int Level;
+   int Level;
+    long HP;
+    long MP;
+    long MaxHP;
+    long MaxMP;
+    int stance;
+	unsigned int Size;
+	int CheatMaxHP;
+	int CheatMaxMP;
+	unsigned int CheatMoveSpeed;
+	int CheatAttackPower;
+    int Attack_Power;
+	unsigned int CheatDefense;
+    unsigned int Defense;
+	unsigned int CheatCritical;
+    unsigned int Critical;
+	unsigned int CheatDodge;
+    unsigned int Dodge;
+	unsigned int CheatAccuracy;
+    unsigned int Accury;
+	unsigned int CheatMagicDefense;
+    unsigned int Magic_Defense;
+    unsigned int Move_Speed;
+	unsigned int Mspd_base;
+    unsigned int Base_Speed;
+	unsigned int CheatAttackSpeed;
+    unsigned int Attack_Speed;
+    float Attack_Distance;
+	unsigned int CheatXPRate;
+	unsigned int xprate;
+	unsigned int CheatItemDropRate;
+    unsigned int itemdroprate;
+	unsigned int CheatZulyDropRate;
+	unsigned int zulydroprate;
+	unsigned int itemdropcountrate;
+    unsigned int MaxWeight;
+	unsigned int CheatMaxSummonGauge;
+    unsigned int MaxSummonGauge;
+    unsigned int MPReduction;
+    unsigned int side; //future expansion of drop system
+    unsigned int sidechance; //future expansion of drop system
+    unsigned int ExtraDamage_add;
+	unsigned int CheatMagicAttack;
+	unsigned int magicattack;
+	int ItemXPRate;
+    int ItemDropRate;
+    clock_t ItemXPTimer;
+    unsigned int ItemXPTime;
+    clock_t ItemDropRateTimer;
+	unsigned int ExtraDamage;
+
+
+	/*
+	int Level;
     long int HP;
     long int MP;
     unsigned int MaxHP;
     unsigned int MaxMP;
-
+	int stance;
+	unsigned int Size;
+	int CheatMaxHP;
+	int CheatMaxMP;
+	unsigned int CheatMoveSpeed;
+	int CheatAttackPower;
     unsigned int Attack_Power;
     unsigned int Defense;
     unsigned int Critical;
@@ -69,6 +127,8 @@ struct STATS
     unsigned int ExtraDamage;
     unsigned int xprate;
     unsigned int magicattack;
+	*/
+
 };
 
 struct BATTLE

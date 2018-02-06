@@ -840,6 +840,8 @@ AIACT(030)
     dword hash = MakeStrHash(tempName);
     Log(MSG_INFO, "Execute Quest Trigger %s[%d] [%08x]", tempName, data->lenszTrigger, hash);
 //	return (entity->ExecuteQuestTrigger(hash) == QUEST_SUCCESS)?AI_SUCCESS:AI_FAILURE;
+	return AI_SUCCESS;	//this is all kinds of wrong but it won't compile if i do it right. 
+	//TODO Rewrite the entire bloody AIP code later..... meh
 }
 
 //Unknown

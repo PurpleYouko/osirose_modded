@@ -483,8 +483,9 @@ bool CWorldServer::OnServerReady( )
     LoadStatusData( );
 
     //LoadDropsData( );
-    LoadPYDropsData( );
-    LoadSkillBookDropsData( );
+    //LoadPYDropsData( );
+	LoadNewDrops( );
+    //LoadSkillBookDropsData( );
     LoadConfig( );
 
     LoadNPCData( );

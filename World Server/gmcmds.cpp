@@ -1681,7 +1681,7 @@ bool CWorldServer::pakGMCommand( CPlayer* thisclient, CPacket* P )
             return true;
         time_t seconds;
         seconds = time (NULL);
-        if ((thisclient->CharInfo->LastGlobal+Config.Command_GlobalTime) <= seconds or thisclient->Session->accesslevel > 100)
+        if ((thisclient->CharInfo->LastGlobal + Config.Command_GlobalTime) <= seconds || thisclient->Session->accesslevel > 100)
         {
             thisclient->CharInfo->LastGlobal = time (NULL);
             char outputmsg[200];

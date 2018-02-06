@@ -77,9 +77,10 @@ bool CWorldServer::DoSkillScript( CCharacter* character, CSkills* thisskill )
 }
 
 // Build Drop
+/*
 CDrop* CWorldServer::GetDrop( CMonster* thismon )
 {
-    try{
+	try{
     CDrop* newdrop = new (nothrow) CDrop;
     if(newdrop==NULL)
     {
@@ -220,8 +221,9 @@ CDrop* CWorldServer::GetDrop( CMonster* thismon )
        return NULL;
     }
 }
+*/
 
-
+/*
 // Build Drop the PY way
 CDrop* CWorldServer::GetPYDrop( CMonster* thismon, UINT droptype )
 {   //if droptype = 1 then it is a normal drop. if it is 2 then it is a potential side drop.
@@ -339,7 +341,7 @@ CDrop* CWorldServer::GetPYDrop( CMonster* thismon, UINT droptype )
         {
             dropmode = 3; //leveldrop selected
         }
-
+		
         int randomdrop = GServer->RandNumber(1, 100);
         for(int i=0; i<MDropList.size( ); i++)
         {
@@ -434,7 +436,7 @@ CDrop* CWorldServer::GetPYDrop( CMonster* thismon, UINT droptype )
     newdrop->item.count = 1;
 
     //int chamod = 0;
-    int chamod = (int)floor(thisclient->Attr->Cha / 30);
+    int chamod = (int)(thisclient->Attr->Cha / 30);
     if(chamod <0) chamod = 0;
     int basedrop = 6 + chamod; //Base number of items to be dropped. add CHA to increase this.
     if( newdrop->item.itemtype == 10 || newdrop->item.itemtype == 12 )
@@ -515,6 +517,364 @@ CDrop* CWorldServer::GetPYDrop( CMonster* thismon, UINT droptype )
     newdrop->item.gem = 0;
     return newdrop;
 }
+*/
+
+// Build Drop. New PY method. Way better than the version above. Wonder if it will work here without massive alterations?
+CDrop* CWorldServer::GetNewDrop( CMonster* thismon )
+{
+    //Log(MSG_DEBUG,"Monster %i killed. FInding a drop",thismon->montype);
+    CPlayer* thisclient = GServer->GetClientByCID(thismon->MonsterDrop->firsthit);
+    if(thisclient == NULL)return NULL;
+    if( thisclient->Session->codedebug )
+            GServer->SendPM(thisclient, "Drops function called after killing monster type %i",thismon->montype);
+
+    int randv;
+    int i;
+    CDrop* newdrop = new (nothrow) CDrop;
+
+    if(newdrop == NULL)
+    {
+        Log(MSG_WARNING, "newDrop is NULL [getdrop]" );
+        return NULL;
+    }
+    CMDrops* thisdrop = NULL;
+    CMDrops* testdrop = NULL;
+
+    newdrop->clientid = GetNewClientID( );
+    newdrop->posMap = thismon->Position->Map;
+    newdrop->pos = RandInCircle( thismon->Position->current, 3 );
+    //newdrop->droptime = time(NULL);
+    newdrop->owner = thismon->MonsterDrop->firsthit;
+    newdrop->thisparty = thismon->thisparty;
+    ClearItem(newdrop->item);
+
+    // Each monster has its own rates for zuly and item drops defined in the stb
+    // first check for Zuly drops
+    randv = RandNumber( 1, 100);
+    if( thisclient->Session->codedebug )
+    {
+       SendPM(thisclient, "randv = %i.  money = %i. itemrate = %i. ", randv,thismon->thisnpc->money );
+    }
+    if(randv <= thismon->thisnpc->money) // zuly drop
+    {
+        newdrop->type = 1; //zuly
+        newdrop->amount = thismon->thisnpc->level * 5 * (Config.ZULY_RATE) + RandNumber( 1, 10 );
+        if( thisclient->Session->codedebug )
+        {
+           SendPM(thisclient, "Zuly drop selected " );
+        }
+        return  newdrop;
+    }
+    //now check for item drops
+	if( thisclient->Session->codedebug )
+    {
+       SendPM(thisclient, "randv = %i. Item = %i. Itemrate = %i", randv,thismon->thisnpc->item );
+    }
+	randv = RandNumber( 1, 100);
+    if(randv <= thismon->thisnpc->item) // Item drop
+    {
+        //OK got an item. Now we find which one
+        //Map drop or mob drop? map = 50% mob = 50%. Maybe should be configurable or modified by monster data?
+        int mapChance = 0;
+		switch(thismon->thisnpc->boss)
+		{
+			case 1:	//king
+			case 4:	//World Boss
+				mapChance = 0;
+				break;
+			case 2: //Giant
+			case 3:	//Guardian
+				mapChance = 10;
+				break;
+			case 5:	//Leader
+				mapChance = 20;
+				break;
+			default:
+				mapChance = 50;
+				break;
+		}
+		int randv2 = RandNumber( 1, 100);
+        if(randv2 <= mapChance) //map drop
+        {
+            for(i=0;i<GServer->MDropList.size();i++)
+            {
+                testdrop =  GServer->MDropList.at(i);
+                if(testdrop == NULL) return NULL;
+                if(testdrop->Dropid == thismon->Position->Map)
+                {
+                    thisdrop = testdrop;
+                }
+            }
+
+            if( thisclient->Session->codedebug )
+            {
+               SendPM(thisclient, "Map drop selected for map %i. ", thismon->Position->Map );
+            }
+        }
+        else // mob drop
+        {
+            for(i=0;i<GServer->MDropList.size();i++)
+            {
+                testdrop =  GServer->MDropList.at(i);
+                if(testdrop == NULL) return NULL;
+                if(testdrop->Dropid == thismon->thisnpc->dropid)
+                {
+                    thisdrop = testdrop;
+                }
+            }
+            if( thisclient->Session->codedebug )
+            {
+               SendPM(thisclient, "Mob drop selected for dropid %i. ", thismon->thisnpc->dropid );
+            }
+        }
+        if(thisdrop == NULL)
+        {
+            Log(MSG_WARNING, "Thisdrop is NULL [getdrop]" );
+            return NULL;
+        }
+        newdrop->type = 2; //Item
+        dword randitem = RandNumber( 1, thisdrop->TotalChance );
+        UINT itemindex = 0;
+        //if( thisclient->Session->codedebug )
+        //{
+        //   SendPM(thisclient, "random chance %i", randitem);
+        //}
+
+        i = 0;
+        do
+        {
+            //if( thisclient->Session->codedebug )
+            //{
+            //   SendPM(thisclient, "Index: %i Item id: %i chance: %i", i, thisdrop->item[i], thisdrop->RunningTotal[i]);
+            //}
+            i++;
+        }
+        while (randitem > thisdrop->RunningTotal[i]);
+        itemindex = i;
+
+        if(thisdrop->item[itemindex] == 0)
+        {
+            Log(MSG_DEBUG, "item at itemindex %i does not exist",itemindex );
+            return NULL; //no item listed for this dropid
+        }
+        //ok we found an item. Now we process it.
+        //if( thisclient->Session->codedebug )
+        //{
+        //   SendPM(thisclient, "Found an item to drop itemindex: %i id: %i. ", itemindex, thisdrop->item[itemindex] );
+        //}
+        if(thisdrop->item[itemindex] < 100000)
+        {
+            newdrop->item.itemtype = thisdrop->item[itemindex] / 1000;
+            newdrop->item.itemnum = thisdrop->item[itemindex] % 1000;
+        }
+        else
+        {
+            newdrop->item.itemtype = thisdrop->item[itemindex] / 1000000;
+            newdrop->item.itemnum = thisdrop->item[itemindex] % 1000000;
+        }
+        //if( thisclient->Session->codedebug )
+        //{
+        //   SendPM(thisclient, "Item type = %i. item number = %i", newdrop->item.itemtype,newdrop->item.itemnum );
+        //}
+        newdrop->item.lifespan = 10 + rand()%80;
+        switch( newdrop->item.itemtype )
+        {
+            case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+                newdrop->item.type = GServer->EquipList[newdrop->item.itemtype].Index[newdrop->item.itemnum]->type;
+                newdrop->item.raretype = GServer->EquipList[newdrop->item.itemtype].Index[newdrop->item.itemnum]->raretype;
+                break;
+            case 10:
+                newdrop->item.type = GServer->UseList.Index[newdrop->item.itemnum]->type;
+                newdrop->item.raretype = 0;
+                break;
+            case 11:
+                newdrop->item.type = GServer->JemList.Index[newdrop->item.itemnum]->type;
+                newdrop->item.raretype = 0;
+                break;
+            case 12:
+                newdrop->item.type = GServer->NaturalList.Index[newdrop->item.itemnum]->type;
+                newdrop->item.raretype = 0;
+                break;
+            case 14:
+                newdrop->item.type = GServer->PatList.Index[newdrop->item.itemnum]->type;
+                newdrop->item.raretype = 0;
+                break;
+            default:
+                Log(MSG_DEBUG, "itemtype %i does not exist",newdrop->item.itemtype );
+                return NULL;
+                break;
+        }
+        float dmod = 0; //random number from 0 to 100 made up of 5 sub numbers to keep
+        //the average value near to 50
+        for(i=0; i<5; i++)
+        {
+            float r1 = rand()%20;
+            dmod += r1;
+        }
+        newdrop->item.durability = 10 + (int)dmod;
+        newdrop->item.appraised = true;
+        newdrop->item.stats = 0;
+        newdrop->item.count = 1;
+
+        if( newdrop->item.itemtype == 8 || newdrop->item.itemtype == 9 )
+        {
+            //This probability is now configurable
+            int psocked = rand()%101; //Probability of finding a socketed item
+            if( psocked < Config.SlotChance) //default should be around 5% needs to be rare
+            {
+                newdrop->item.socketed = true;
+            }
+            else
+            {
+                 newdrop->item.socketed = false;
+            }
+        }
+        else
+        {
+            newdrop->item.socketed = false;
+        }
+
+		float TmpMod = thisclient->Attr->Cha / 30;
+        short chamod = (short)floor(TmpMod);
+        if(chamod < 0) chamod = 0;
+        int basedrop = thisclient->Stats->itemdropcountrate; //Base number of items to be dropped.
+        int maxdrop = basedrop + Config.DropMultiple;
+        if(newdrop->item.itemtype == 11) //gems only get 1
+            newdrop->item.count = 1;
+        if( newdrop->item.itemtype == 10 || newdrop->item.itemtype == 12 )
+        {
+            newdrop->item.count = RandNumber(basedrop, maxdrop);
+            if(thismon->thisnpc->level == 1)
+                newdrop->item.count = 1; //limit the drop rate of items from level 1 event mobs
+            if(newdrop->item.count == 0)
+                newdrop->item.count = 1;
+            if(newdrop->item.type == 314) //skillbooks
+                newdrop->item.count = 1;
+            if(newdrop->item.itemtype == 12)
+            {
+                newdrop->item.count = RandNumber(1, 6) + RandNumber(0, thisclient->Stats->itemdropcountrate); //basic type 12 items
+                //some item types have their own rules
+                if(newdrop->item.type == 428) //special skill items such as mana jams and scrolls
+                    newdrop->item.count = RandNumber(1, 3);
+                if(newdrop->item.itemnum > 300 && newdrop->item.itemnum < 360) //bullets get a lot higher count.
+                {
+                    newdrop->item.count *= 10;
+                    newdrop->item.count += 10;
+                }
+            }
+        }
+        else if( newdrop->item.itemtype > 1 && newdrop->item.itemtype !=7 && newdrop->item.itemtype < 10)		//Why not refine jewelry? should be possible
+        {
+            // check to see if the item will be refined
+            int prefine = rand()%100; //Probability of finding a refined item
+            int refinechance = Config.RefineChance;
+            if(prefine < refinechance) // default = 5%
+            {
+                int refinelevel = rand()%101;  //which level of refine do we actually get
+                if( refinelevel < 5)        //default 5%
+                    newdrop->item.refine = 4 * 16;
+                else if( refinelevel < 15 )   //10%
+                    newdrop->item.refine = 3 * 16;
+                else if(refinelevel < 35 )   // 20%
+                    newdrop->item.refine = 2 * 16;
+                else                          // 65%
+                    newdrop->item.refine = 16;
+            }
+            else //95%
+                newdrop->item.refine = 0;
+
+            int StatChance = Config.StatChance;
+			int Stat2Chance = 0;
+            if(newdrop->item.raretype > 0) // it's a blue item
+            {
+                int pstats = RandNumber(1, 100);
+				newdrop->item.durability += 10;		//make blues a little more durable
+				if( pstats < StatChance + 10)       // default 15%. More chance of extra stats on a blue
+				{
+					newdrop->item.appraised = false;   //statted items need to be appraised
+					newdrop->item.stats = RandNumber(0, 299); 
+				}
+				//now unique stats. About 75% of dropped blues should have unique stats. reset statchance
+				StatChance = 75;
+				Stat2Chance = 35;
+            }
+            else // not a blue item
+            {
+                int pstats = RandNumber(1, 100);
+                if( pstats < StatChance)        // default 5%
+				{
+                    newdrop->item.appraised = false;   //statted items need to be appraised
+					newdrop->item.stats = RandNumber(0, 299); 
+				}
+				//now unique stats. About 50% of dropped blues should have unique stats. reset statchance
+				StatChance = 50;
+				Stat2Chance = 20;
+            }
+			//Unique stats
+			int pstats = RandNumber(1, 100);
+			if( pstats < StatChance)       
+			{
+				newdrop->item.UStat[0] = GetUStat( 0 ); 
+				newdrop->item.UValue[0] = GetUValue( 0 , newdrop->item.UStat[0] );
+				if( pstats < Stat2Chance )
+				{
+					newdrop->item.UStat[1] = GetUStat( 0 );
+					newdrop->item.UValue[1] = GetUValue( 0 , newdrop->item.UStat[1] );
+				}
+			}
+        }
+        newdrop->item.gem = 0;
+        if(newdrop->item.count == 0) 
+            newdrop->item.count = 1;  //just in case this is causing bugged items.
+        if( thisclient->Session->codedebug )
+        {
+           SendPM(thisclient, "Dropped item type: %i ID: %i count %i", newdrop->item.itemtype, newdrop->item.itemnum,newdrop->item.count);
+        }
+        return newdrop;
+
+    }
+    return NULL;
+    // did not qualify to drop anything this time
+}
+
+//Adding new stats to make items truly unique
+UINT CWorldServer::GetUStat(short modifier)
+{
+	short UStat = 0;
+	//now to assign the actual stat
+	UStat = RandNumber( 3,132 );		//recode more inteligently later
+
+	return UStat;
+}
+
+UINT CWorldServer::GetUValue( short modifier, short stat )
+{
+	short UValue = 0;
+	UValue = RandNumber( 1, 10 );		//recode more inteligently later
+	return UValue;
+}
+
+// PY extra stats lookup
+ UINT CWorldServer::GetExtraStats( UINT modifier )
+ {
+    UINT stat = rand()%300 + modifier;
+    if(stat > 300)stat = 300;
+    return StatLookup[stat].statnumber;
+ }
+
+ // this function makes sure that values returned from the char are positive. negative numbers mess up characters.
+UINT CWorldServer::GetSafeAtoi( char *itmp )
+{
+	DWORD tmpVal = atoi(itmp);
+	UINT retVal = 0;
+	if( tmpVal < 0 )
+		retVal = 0;
+	else
+		retVal = (UINT)tmpVal;
+	return retVal;
+}
+
+
 
 
 UINT CWorldServer::GetColorExp( UINT playerlevel,UINT moblevel, UINT exp )

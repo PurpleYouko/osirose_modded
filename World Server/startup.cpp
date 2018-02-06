@@ -44,6 +44,7 @@ bool CWorldServer::LoadSTBData()
 	STBStoreData("3DData\\STB\\LIST_SELL.STB", &STB_SELL);
 	STBStoreData("3DData\\STB\\LIST_ZONE.STB", &STB_ZONE);
 	STBStoreData("3DData\\STB\\ITEM_DROP.STB", &STB_DROP);
+	return true;
 }
 bool CWorldServer::LoadNPCData()
 {
@@ -484,6 +485,7 @@ bool CWorldServer::LoadNPCs()
 	return true;
 }
 
+/*
 bool CWorldServer::LoadDropsData()
 {
 	Log(MSG_LOAD, "Drops Data       ");
@@ -579,8 +581,9 @@ bool CWorldServer::LoadDropsData()
 	fclose(fh);
 	return true;
 }
+*/
 
-
+/*
 bool CWorldServer::LoadPYDropsData()
 {
     Log(MSG_INFO, "Loading PYDrops Data");
@@ -631,7 +634,53 @@ bool CWorldServer::LoadPYDropsData()
     Log(MSG_INFO, "PYDrops loaded");
     return true;
 }
+*/
 
+bool CWorldServer::LoadNewDrops( )
+{
+    Log( MSG_INFO, "Loading New Drops Data" );
+    MDropList.clear();
+    MYSQL_ROW row;
+    MYSQL_RES *result = DB->QStore("SELECT * FROM new_drops");
+    if(result==NULL)
+    {
+        DB->QFree( );
+        return false;
+    }
+    while(row = mysql_fetch_row(result))
+    {
+        CMDrops* newdrop = new (nothrow) CMDrops;
+        assert(newdrop);
+
+        UINT readIndex = 1;
+        newdrop->Dropid = atoi(row[0]);
+        for(int i=0;i<50;i++)
+        {
+            newdrop->item[i] = atoi(row[readIndex]);
+            readIndex++;
+            newdrop->chance[i] = atoi(row[readIndex]);
+            readIndex++;
+            if(i == 0)
+            {
+                newdrop->RunningTotal[i] = newdrop->chance[i];
+            }
+            else
+            {
+                newdrop->RunningTotal[i] = newdrop->RunningTotal[i-1] + newdrop->chance[i];
+            }
+            //if(newdrop->Dropid == 26)
+            //    Log( MSG_INFO, "item %i chance %i total %i",newdrop->item[i],newdrop->chance[i],newdrop->RunningTotal[i] );
+
+        }
+        newdrop->TotalChance = newdrop->RunningTotal[49];
+        MDropList.push_back( newdrop );
+    }
+    DB->QFree( );
+    Log( MSG_INFO, "New Drops loaded" );
+    return true;
+}
+
+/*
 bool CWorldServer::LoadSkillBookDropsData()
 {
     Log(MSG_INFO, "Loading Skillbook data");
@@ -660,6 +709,7 @@ bool CWorldServer::LoadSkillBookDropsData()
     Log(MSG_INFO, "Skillbook Data loaded");
     return true;
 }
+*/
 
 bool CWorldServer::LoadConfig()
 {

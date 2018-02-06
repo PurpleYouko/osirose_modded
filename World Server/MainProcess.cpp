@@ -132,7 +132,7 @@ PVOID MapProcess( PVOID TS )
                 //PY patch for purified Rackies
                 if(monster->montype >750 && monster->montype < 754) //ghost rackie
                 {
-                    UINT etime = (UINT)round((clock( ) - monster->SpawnTime));
+                    clock_t etime = clock() -  monster->SpawnTime;
                     if(etime>5000)
                     {
                         UINT newmon = monster->montype-654;
@@ -146,7 +146,7 @@ PVOID MapProcess( PVOID TS )
                 }
                 if(monster->montype >95 && monster->montype < 100) //purified rackie
                 {
-                    UINT etime = (UINT)round((clock( ) - monster->SpawnTime));
+                    clock_t etime = clock() -  monster->SpawnTime;
                     if(etime>20000)
                     {
                         //20 seconds should be enough :)

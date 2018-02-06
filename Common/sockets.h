@@ -60,7 +60,7 @@
 #include <math.h>
 #include <cmath>
 #include <map>
-#include <pthread.h>
+#include "pthread.h"
 #include <vector>
 #include <csignal>
 #include "log.h"
@@ -240,6 +240,7 @@ struct CROSEServerConfig
     int RefineChance;
     int Rare_Refine;
     int KillOnFail;
+	int DropMultiple;
 
     // COMMAND LEVELS
     int Command_Go;
