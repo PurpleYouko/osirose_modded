@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3271BFBA-2234-48E6-B2C2-63A56D8BBD9C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>WorldServerVS</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Common\config.cpp" />
+    <ClCompile Include="..\..\..\Common\database\database.cpp" />
+    <ClCompile Include="..\..\..\Common\globals.cpp" />
+    <ClCompile Include="..\..\..\Common\log.cpp" />
+    <ClCompile Include="..\..\..\Common\rosecrypt.cpp" />
+    <ClCompile Include="..\..\..\Common\SocketBase.cpp" />
+    <ClCompile Include="..\..\..\Common\SocketClient.cpp" />
+    <ClCompile Include="..\..\..\Common\SocketServer.cpp" />
+    <ClCompile Include="..\..\..\World Server\battle.cpp" />
+    <ClCompile Include="..\..\..\World Server\Buff.cpp" />
+    <ClCompile Include="..\..\..\World Server\character.cpp" />
+    <ClCompile Include="..\..\..\World Server\charevent.cpp" />
+    <ClCompile Include="..\..\..\World Server\charfunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\charstats.cpp" />
+    <ClCompile Include="..\..\..\World Server\clan.cpp" />
+    <ClCompile Include="..\..\..\World Server\extrafunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\gmcmds.cpp" />
+    <ClCompile Include="..\..\..\World Server\itemdata.cpp" />
+    <ClCompile Include="..\..\..\World Server\main.cpp" />
+    <ClCompile Include="..\..\..\World Server\MainProcess.cpp" />
+    <ClCompile Include="..\..\..\World Server\mapfunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\Monster.cpp" />
+    <ClCompile Include="..\..\..\World Server\MonsterEvents.cpp" />
+    <ClCompile Include="..\..\..\World Server\monsterfunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\MonsterStats.cpp" />
+    <ClCompile Include="..\..\..\World Server\Party.cpp" />
+    <ClCompile Include="..\..\..\World Server\partyfunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\player.cpp" />
+    <ClCompile Include="..\..\..\World Server\playerdata.cpp" />
+    <ClCompile Include="..\..\..\World Server\playerfunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\playerquest.cpp" />
+    <ClCompile Include="..\..\..\World Server\playerstats.cpp" />
+    <ClCompile Include="..\..\..\World Server\ServerFunctions.cpp" />
+    <ClCompile Include="..\..\..\World Server\startup.cpp" />
+    <ClCompile Include="..\..\..\World Server\stbhandler.cpp" />
+    <ClCompile Include="..\..\..\World Server\strhashing.cpp" />
+    <ClCompile Include="..\..\..\World Server\worldmap.cpp" />
+    <ClCompile Include="..\..\..\World Server\WorldMonster.cpp" />
+    <ClCompile Include="..\..\..\World Server\worldpackets.cpp" />
+    <ClCompile Include="..\..\..\World Server\Worldprocess.cpp" />
+    <ClCompile Include="..\..\..\World Server\worldserver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Common\config.h" />
+    <ClInclude Include="..\..\..\Common\database\database.h" />
+    <ClInclude Include="..\..\..\Common\log.h" />
+    <ClInclude Include="..\..\..\Common\rosecrypt.hpp" />
+    <ClInclude Include="..\..\..\Common\sockets.h" />
+    <ClInclude Include="..\..\..\World Server\character.h" />
+    <ClInclude Include="..\..\..\World Server\chartype.h" />
+    <ClInclude Include="..\..\..\World Server\datatypes.h" />
+    <ClInclude Include="..\..\..\World Server\party.h" />
+    <ClInclude Include="..\..\..\World Server\player.h" />
+    <ClInclude Include="..\..\..\World Server\stbhandler.h" />
+    <ClInclude Include="..\..\..\World Server\strhashing.h" />
+    <ClInclude Include="..\..\..\World Server\worldmap.h" />
+    <ClInclude Include="..\..\..\World Server\WorldMonster.h" />
+    <ClInclude Include="..\..\..\World Server\WorldServer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

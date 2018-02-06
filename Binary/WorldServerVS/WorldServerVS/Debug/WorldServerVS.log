@@ -1,0 +1,98 @@
+﻿Build started 2/6/2018 11:08:02 AM.
+     1>Project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS\WorldServerVS.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\WorldServerVS.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\WorldServerVS.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\Common\config.cpp ..\..\..\Common\database\database.cpp ..\..\..\Common\globals.cpp ..\..\..\Common\log.cpp ..\..\..\Common\rosecrypt.cpp ..\..\..\Common\SocketBase.cpp ..\..\..\Common\SocketClient.cpp ..\..\..\Common\SocketServer.cpp "..\..\..\World Server\battle.cpp" "..\..\..\World Server\Buff.cpp" "..\..\..\World Server\character.cpp" "..\..\..\World Server\charevent.cpp" "..\..\..\World Server\charfunctions.cpp" "..\..\..\World Server\charstats.cpp" "..\..\..\World Server\clan.cpp" "..\..\..\World Server\extrafunctions.cpp" "..\..\..\World Server\gmcmds.cpp" "..\..\..\World Server\itemdata.cpp" "..\..\..\World Server\main.cpp" "..\..\..\World Server\MainProcess.cpp" "..\..\..\World Server\mapfunctions.cpp" "..\..\..\World Server\Monster.cpp" "..\..\..\World Server\MonsterEvents.cpp" "..\..\..\World Server\monsterfunctions.cpp" "..\..\..\World Server\MonsterStats.cpp" "..\..\..\World Server\Party.cpp" "..\..\..\World Server\partyfunctions.cpp" "..\..\..\World Server\player.cpp" "..\..\..\World Server\playerdata.cpp" "..\..\..\World Server\playerfunctions.cpp" "..\..\..\World Server\playerquest.cpp" "..\..\..\World Server\playerstats.cpp" "..\..\..\World Server\ServerFunctions.cpp" "..\..\..\World Server\startup.cpp" "..\..\..\World Server\stbhandler.cpp" "..\..\..\World Server\strhashing.cpp" "..\..\..\World Server\worldmap.cpp" "..\..\..\World Server\WorldMonster.cpp" "..\..\..\World Server\worldpackets.cpp" "..\..\..\World Server\Worldprocess.cpp" "..\..\..\World Server\worldserver.cpp"
+         worldserver.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\worldserver.cpp(929): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Worldprocess.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\worldprocess.cpp(159): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         worldpackets.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\worldpackets.cpp(3992): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         WorldMonster.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\worldmonster.cpp(70): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         worldmap.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\worldmap.cpp(268): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         strhashing.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\strhashing.cpp(20): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         stbhandler.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\stbhandler.cpp(47): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         startup.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\startup.cpp(1090): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         ServerFunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\serverfunctions.cpp(706): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         playerstats.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\playerstats.cpp(1996): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         playerquest.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\playerquest.cpp(3): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         playerfunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\playerfunctions.cpp(805): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         playerdata.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\playerdata.cpp(390): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         player.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\player.cpp(471): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         partyfunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\partyfunctions.cpp(113): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Party.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\party.cpp(357): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         MonsterStats.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\monsterstats.cpp(180): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         monsterfunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\monsterfunctions.cpp(145): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         MonsterEvents.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\monsterevents.cpp(374): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Monster.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\monster.cpp(152): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Generating Code...
+         Compiling...
+         mapfunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\mapfunctions.cpp(363): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         MainProcess.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\mainprocess.cpp(330): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         main.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\main.cpp(82): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         itemdata.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\itemdata.cpp(46): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         gmcmds.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\gmcmds.cpp(3071): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         extrafunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\extrafunctions.cpp(1107): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         clan.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\clan.cpp(253): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         charstats.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\charstats.cpp(101): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         charfunctions.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\charfunctions.cpp(464): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         charevent.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\charevent.cpp(64): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         character.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\character.cpp(167): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Buff.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\buff.cpp(904): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         battle.cpp
+     1>f:\triggersoft\osirose for modded hrose\world server\battle.cpp(958): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         SocketServer.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\socketserver.cpp(546): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         SocketClient.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\socketclient.cpp(245): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         SocketBase.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\socketbase.cpp(67): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         rosecrypt.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\rosecrypt.cpp(532): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         log.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\log.cpp(143): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         globals.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\globals.cpp(92): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         database.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\database\database.cpp(185): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Generating Code...
+         Compiling...
+         config.cpp
+     1>f:\triggersoft\osirose for modded hrose\common\config.cpp(115): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Generating Code...
+     1>Done Building Project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS\WorldServerVS.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.05
