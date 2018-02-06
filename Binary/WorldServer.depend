@@ -278,3 +278,277 @@
 1390574652 source:f:\triggersoft\osirose\world server\worldserver.cpp
 	"worldserver.h"
 
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\socketbase.cpp
+	"sockets.h"
+
+1222177657 f:\triggersoft\osirose for modded hrose\common\sockets.h
+	<windows.h>
+	<winsock2.h>
+	<unistd.h>
+	<netinet/in.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<arpa/inet.h>
+	<sys/ioctl.h>
+	<cstdarg>
+	<errno.h>
+	<mysql/mysql.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<vector>
+	<string>
+	<cstdio>
+	<exception>
+	<time.h>
+	<assert.h>
+	<math.h>
+	<cmath>
+	<map>
+	<pthread.h>
+	<vector>
+	<csignal>
+	"log.h"
+	"rosecrypt.hpp"
+	"config.h"
+	"database/database.h"
+
+1216989907 f:\triggersoft\osirose for modded hrose\common\log.h
+
+1216989907 f:\triggersoft\osirose for modded hrose\common\rosecrypt.hpp
+
+1216989907 f:\triggersoft\osirose for modded hrose\common\config.h
+
+1216989907 f:\triggersoft\osirose for modded hrose\common\database\database.h
+	"../sockets.h"
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\socketclient.cpp
+	"sockets.h"
+	"config.h"
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\socketserver.cpp
+	"sockets.h"
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\config.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<ctype.h>
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\database\database.cpp
+	"database.h"
+	"../log.h"
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\globals.cpp
+	"sockets.h"
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\log.cpp
+	<conio.h>
+	<windows.h>
+	<cstdio>
+	<cstdio>
+	"log.h"
+
+1216989907 source:f:\triggersoft\osirose for modded hrose\common\rosecrypt.cpp
+	<fstream>
+	<iostream>
+	"rosecrypt.hpp"
+
+1218462010 source:f:\triggersoft\osirose for modded hrose\world server\buff.cpp
+	"worldserver.h"
+
+1233762204 f:\triggersoft\osirose for modded hrose\world server\worldserver.h
+	"../common/sockets.h"
+	"worldmonster.h"
+	"quest/CRoseArray.hpp"
+	"quest/CRoseFile.hpp"
+	"quest/CStrStb.hpp"
+	"quest/CIntStb.hpp"
+	"quest/QuestTrigger.h"
+	"aip/Aip.h"
+	"worldmap.h"
+	"player.h"
+	"character.h"
+	"party.h"
+	"datatypes.h"
+	"stbhandler.h"
+	"strhashing.h"
+
+1248697156 f:\triggersoft\osirose for modded hrose\world server\worldmonster.h
+	"character.h"
+	"player.h"
+	"worldserver.h"
+
+1248697156 f:\triggersoft\osirose for modded hrose\world server\character.h
+	"chartype.h"
+
+1248697156 f:\triggersoft\osirose for modded hrose\world server\chartype.h
+	"datatypes.h"
+
+1248697156 f:\triggersoft\osirose for modded hrose\world server\datatypes.h
+	"../common/sockets.h"
+
+1248697156 f:\triggersoft\osirose for modded hrose\world server\player.h
+	"character.h"
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\crosearray.hpp
+	<memory.h>
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\crosefile.hpp
+	<stdio.h>
+	<stdlib.h>
+	"CRoseArray.hpp"
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\cstrstb.hpp
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\cintstb.hpp
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\questtrigger.h
+	"QuestConditions.h"
+	"QuestActions.h"
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\questconditions.h
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\quest\questactions.h
+
+1216989908 f:\triggersoft\osirose for modded hrose\world server\aip\aip.h
+	"AiConditions.h"
+	"AiActions.h"
+
+1216989908 f:\triggersoft\osirose for modded hrose\world server\aip\aiconditions.h
+
+1216989908 f:\triggersoft\osirose for modded hrose\world server\aip\aiactions.h
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\worldmap.h
+	"worldserver.h"
+	"player.h"
+	"character.h"
+	"worldmonster.h"
+	"datatypes.h"
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\party.h
+	"worldserver.h"
+	"datatypes.h"
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\stbhandler.h
+	"worldserver.h"
+
+1216989909 f:\triggersoft\osirose for modded hrose\world server\strhashing.h
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\mainprocess.cpp
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\monster.cpp
+	"worldmonster.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\monsterevents.cpp
+	"worldmonster.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\monsterstats.cpp
+	"worldmonster.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\party.cpp
+	"worldserver.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\serverfunctions.cpp
+	"worldserver.h"
+
+1222177659 source:f:\triggersoft\osirose for modded hrose\world server\worldmonster.cpp
+	"worldmonster.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\worldprocess.cpp
+	"worldserver.h"
+
+1222177658 source:f:\triggersoft\osirose for modded hrose\world server\aip\aiactions.cpp
+	"../WorldServer.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\aip\aiconditions.cpp
+	"../WorldServer.h"
+
+1216989908 source:f:\triggersoft\osirose for modded hrose\world server\aip\aip.cpp
+	"../WorldServer.h"
+
+1222177660 source:f:\triggersoft\osirose for modded hrose\world server\battle.cpp
+	"character.h"
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\character.cpp
+	"character.h"
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\charevent.cpp
+	"character.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\charfunctions.cpp
+	"character.h"
+	"worldserver.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\charstats.cpp
+	"character.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\clan.cpp
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\extrafunctions.cpp
+	"worldserver.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\gmcmds.cpp
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\itemdata.cpp
+	"datatypes.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\main.cpp
+	"worldserver.h"
+
+1222177659 source:f:\triggersoft\osirose for modded hrose\world server\mapfunctions.cpp
+	"worldmap.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\monsterfunctions.cpp
+	"worldmonster.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\partyfunctions.cpp
+	"party.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\player.cpp
+	"player.h"
+	"worldserver.h"
+
+1222177659 source:f:\triggersoft\osirose for modded hrose\world server\playerdata.cpp
+	"player.h"
+	"worldserver.h"
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\playerfunctions.cpp
+	"player.h"
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\playerquest.cpp
+
+1248697156 source:f:\triggersoft\osirose for modded hrose\world server\playerstats.cpp
+	"player.h"
+	"worldserver.h"
+
+1222177659 source:f:\triggersoft\osirose for modded hrose\world server\quest\questactions.cpp
+	"../WorldServer.h"
+
+1222177659 source:f:\triggersoft\osirose for modded hrose\world server\quest\questconditions.cpp
+	"../WorldServer.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\quest\quests.cpp
+	"../WorldServer.h"
+
+1250513898 source:f:\triggersoft\osirose for modded hrose\world server\startup.cpp
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\stbhandler.cpp
+	"worldserver.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\strhashing.cpp
+	"worldserver.h"
+
+1222436536 source:f:\triggersoft\osirose for modded hrose\world server\worldmap.cpp
+	"worldmap.h"
+
+1216989909 source:f:\triggersoft\osirose for modded hrose\world server\worldserver.cpp
+	"worldserver.h"
+

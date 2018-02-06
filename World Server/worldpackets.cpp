@@ -352,7 +352,9 @@ bool CWorldServer::pakDoIdentify( CPlayer *thisclient, CPacket *P )
     	ADDBYTE    ( pak, 0 );
     	thisclient->client->SendPacket( &pak );
     	SendSysMsg( thisclient, "Osirose server made by the comunity of osrose " );*/
+    Log( MSG_INFO, "About to set stats");
     thisclient->SetStats( );
+    Log( MSG_INFO, "Back from stats");
     return true;
 }
 

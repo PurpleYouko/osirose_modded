@@ -117,3 +117,124 @@ SELECT `logo`,`back`,`name`,`cp`,`grade` FROM `list_clan` where `id`=2
 SELECT quests from list_quest where owner=2
 UPDATE accounts SET online=1 where id=6
 UPDATE accounts SET online=0 WHERE username=''
+SELECT @@wait_timeout
+SELECT @@wait_timeout
+DELETE FROM channels WHERE id=1
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (1,'Server 1','127.0.0.1',29100,0,0,0)
+SELECT id,logo,back,name,cp,grade,slogan,news FROM list_clan
+SELECT id,char_name,clan_rank FROM characters WHERE clanid=2 order by clan_rank
+SELECT id,char_name,clan_rank FROM characters WHERE clanid=3 order by clan_rank
+SELECT @@wait_timeout
+SELECT `id`,`type`,`min_level`,`max_level`,`prob`,`mob`,`map`,`alt` FROM `item_drops`
+SELECT `id`,`itemtype`,`min`,`max`,`prob` FROM `list_skillbooks`
+SELECT `exp_rate`, `drop_rate`, `zuly_rate`, `blue_chance`, `stat_chance`, `slot_chance`,         `refine_chance`, `rare_refine`, `kill_on_fail`, `player_damage`, `monster_damage`, `player_acc`, `monster_acc`,         `pvp_acc`, `skill_damage` FROM `list_config`
+SELECT `id`, `srcx`, `srcy`, `srcmap`, `destx`, `desty`, `destmap` FROM `list_telegates`
+SELECT `id`,`x`,`y`,`map`,`radius`,`type` FROM `list_respawnzones`
+SELECT `id`, `map`, `x`, `y`, `range`, `respawntime`, `limit`, `tacticalpoints`, `moblist` FROM `list_mobgroups`
+SELECT `type`,`map`,`dir`,`x`,`y`,`dialogid` FROM `list_npcs`
+UPDATE accounts set online=false
+DELETE FROM channels WHERE id=2
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (2,'Channel 1','127.0.0.1',29200,0,500,1)
+SELECT id,password,accesslevel,online FROM accounts WHERE username='purpleyouko'
+SELECT id,name FROM channels WHERE owner=0
+SELECT id,name,connected,maxconnections FROM channels WHERE owner=1
+UPDATE accounts SET lastsvr=2,lastip='127.0.0.1' WHERE id=6
+SELECT host,port,connected,maxconnections FROM channels WHERE id=1
+SELECT username,lastsvr,accesslevel,platinum FROM accounts WHERE id=6 AND password='80f2ef8d121d9b6dcb5019a5a375db92'
+SELECT online FROM accounts WHERE username='purpleyouko'
+UPDATE accounts SET online=1 WHERE username='purpleyouko'
+DELETE FROM characters, items, list_friend, list_quest USING characters LEFT JOIN items ON items.owner = characters.id LEFT JOIN list_friend                 ON (list_friend.id = characters.id OR list_friend.idfriend = characters.id) LEFT JOIN list_quest ON list_quest.owner = characters.id WHERE (characters.deletetime > 0 AND characters.deletetime <= 619338560)
+SELECT char_name,level,face,hairStyle,sex,classid,id,deletetime FROM characters WHERE account_name='purpleyouko'
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=2 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=4 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=5 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=6 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=7 AND slotnum<10
+UPDATE accounts SET lastchar='PurpleGuardian' WHERE id=6
+SELECT host,port FROM channels WHERE id=2
+SELECT clanid,clan_rank,id,level,classid FROM characters WHERE char_name='PurpleGuardian'
+SELECT idfriend,namefriend FROM list_friend WHERE id=4
+SELECT username,lastchar,accesslevel,zulystorage FROM accounts WHERE id=6 AND password='80f2ef8d121d9b6dcb5019a5a375db92'
+SELECT `level`,`face`,`hairStyle`,`sex`,`classid`,`zuly`,`str`,`dex`,`_int`, `con`,`cha`,`sen`,`curHp`,`curMp`,`id`,`statp`,`skillp`,`exp`,`stamina`,`quickbar`,`basic_skills`,`askill`,`askilllvl`,`pskill`,`pskilllvl`,`respawnid`,`clanid`,`clan_rank`,`townid` FROM `characters` WHERE `char_name`='PurpleGuardian'
+SELECT unionid,union1points,union2points,union3points,union4points,union5points,union6points,union7points,union8points,union9points,union10points FROM characters WHERE char_name='PurpleGuardian'
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum,count,stats,socketed,appraised,gem FROM items WHERE owner=4
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum,count,stats,socketed,appraised,gem FROM storage WHERE owner=6
+SELECT quests from list_quest where owner=4
+UPDATE accounts SET online=1 where id=6
+UPDATE accounts SET online=0 WHERE username=''
+UPDATE accounts SET online=0 WHERE username='purpleyouko'
+SELECT @@wait_timeout
+SELECT `id`,`type`,`min_level`,`max_level`,`prob`,`mob`,`map`,`alt` FROM `item_drops`
+SELECT `id`,`itemtype`,`min`,`max`,`prob` FROM `list_skillbooks`
+SELECT `exp_rate`, `drop_rate`, `zuly_rate`, `blue_chance`, `stat_chance`, `slot_chance`,         `refine_chance`, `rare_refine`, `kill_on_fail`, `player_damage`, `monster_damage`, `player_acc`, `monster_acc`,         `pvp_acc`, `skill_damage` FROM `list_config`
+SELECT `id`, `srcx`, `srcy`, `srcmap`, `destx`, `desty`, `destmap` FROM `list_telegates`
+SELECT `id`,`x`,`y`,`map`,`radius`,`type` FROM `list_respawnzones`
+SELECT `id`, `map`, `x`, `y`, `range`, `respawntime`, `limit`, `tacticalpoints`, `moblist` FROM `list_mobgroups`
+SELECT `type`,`map`,`dir`,`x`,`y`,`dialogid` FROM `list_npcs`
+UPDATE accounts set online=false
+DELETE FROM channels WHERE id=2
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (2,'Channel 1','127.0.0.1',29200,0,500,1)
+UPDATE accounts SET online=0 WHERE username=''
+SELECT @@wait_timeout
+SELECT @@wait_timeout
+DELETE FROM channels WHERE id=1
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (1,'Server 1','127.0.0.1',29100,0,0,0)
+SELECT id,logo,back,name,cp,grade,slogan,news FROM list_clan
+SELECT id,char_name,clan_rank FROM characters WHERE clanid=2 order by clan_rank
+SELECT id,char_name,clan_rank FROM characters WHERE clanid=3 order by clan_rank
+SELECT @@wait_timeout
+SELECT `id`,`type`,`min_level`,`max_level`,`prob`,`mob`,`map`,`alt` FROM `item_drops`
+SELECT `id`,`itemtype`,`min`,`max`,`prob` FROM `list_skillbooks`
+SELECT `exp_rate`, `drop_rate`, `zuly_rate`, `blue_chance`, `stat_chance`, `slot_chance`,         `refine_chance`, `rare_refine`, `kill_on_fail`, `player_damage`, `monster_damage`, `player_acc`, `monster_acc`,         `pvp_acc`, `skill_damage` FROM `list_config`
+SELECT `id`, `srcx`, `srcy`, `srcmap`, `destx`, `desty`, `destmap` FROM `list_telegates`
+SELECT `id`,`x`,`y`,`map`,`radius`,`type` FROM `list_respawnzones`
+SELECT `id`, `map`, `x`, `y`, `range`, `respawntime`, `limit`, `tacticalpoints`, `moblist` FROM `list_mobgroups`
+SELECT `type`,`map`,`dir`,`x`,`y`,`dialogid` FROM `list_npcs`
+UPDATE accounts set online=false
+DELETE FROM channels WHERE id=2
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (2,'Channel 1','127.0.0.1',29200,0,500,1)
+UPDATE accounts SET online=0 WHERE username=''
+SELECT @@wait_timeout
+SELECT @@wait_timeout
+DELETE FROM channels WHERE id=1
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (1,'Server 1','127.0.0.1',29100,0,0,0)
+SELECT id,logo,back,name,cp,grade,slogan,news FROM list_clan
+SELECT id,char_name,clan_rank FROM characters WHERE clanid=2 order by clan_rank
+SELECT id,char_name,clan_rank FROM characters WHERE clanid=3 order by clan_rank
+SELECT @@wait_timeout
+SELECT `id`,`type`,`min_level`,`max_level`,`prob`,`mob`,`map`,`alt` FROM `item_drops`
+SELECT `id`,`itemtype`,`min`,`max`,`prob` FROM `list_skillbooks`
+SELECT `exp_rate`, `drop_rate`, `zuly_rate`, `blue_chance`, `stat_chance`, `slot_chance`,         `refine_chance`, `rare_refine`, `kill_on_fail`, `player_damage`, `monster_damage`, `player_acc`, `monster_acc`,         `pvp_acc`, `skill_damage` FROM `list_config`
+SELECT `id`, `srcx`, `srcy`, `srcmap`, `destx`, `desty`, `destmap` FROM `list_telegates`
+SELECT `id`,`x`,`y`,`map`,`radius`,`type` FROM `list_respawnzones`
+SELECT `id`, `map`, `x`, `y`, `range`, `respawntime`, `limit`, `tacticalpoints`, `moblist` FROM `list_mobgroups`
+SELECT `type`,`map`,`dir`,`x`,`y`,`dialogid` FROM `list_npcs`
+UPDATE accounts set online=false
+DELETE FROM channels WHERE id=2
+INSERT INTO channels (id,name,host,port,connected,maxconnections,owner) VALUES (2,'Channel 1','127.0.0.1',29200,0,500,1)
+SELECT id,password,accesslevel,online FROM accounts WHERE username='purpleyouko'
+SELECT id,name FROM channels WHERE owner=0
+SELECT id,name,connected,maxconnections FROM channels WHERE owner=1
+UPDATE accounts SET lastsvr=2,lastip='127.0.0.1' WHERE id=6
+SELECT host,port,connected,maxconnections FROM channels WHERE id=1
+SELECT username,lastsvr,accesslevel,platinum FROM accounts WHERE id=6 AND password='80f2ef8d121d9b6dcb5019a5a375db92'
+SELECT online FROM accounts WHERE username='purpleyouko'
+UPDATE accounts SET online=1 WHERE username='purpleyouko'
+DELETE FROM characters, items, list_friend, list_quest USING characters LEFT JOIN items ON items.owner = characters.id LEFT JOIN list_friend                 ON (list_friend.id = characters.id OR list_friend.idfriend = characters.id) LEFT JOIN list_quest ON list_quest.owner = characters.id WHERE (characters.deletetime > 0 AND characters.deletetime <= 619339629)
+SELECT char_name,level,face,hairStyle,sex,classid,id,deletetime FROM characters WHERE account_name='purpleyouko'
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=2 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=4 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=5 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=6 AND slotnum<10
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum FROM items WHERE owner=7 AND slotnum<10
+UPDATE accounts SET lastchar='UltimateWarrior' WHERE id=6
+SELECT host,port FROM channels WHERE id=2
+SELECT clanid,clan_rank,id,level,classid FROM characters WHERE char_name='UltimateWarrior'
+SELECT idfriend,namefriend FROM list_friend WHERE id=6
+SELECT username,lastchar,accesslevel,zulystorage FROM accounts WHERE id=6 AND password='80f2ef8d121d9b6dcb5019a5a375db92'
+SELECT `level`,`face`,`hairStyle`,`sex`,`classid`,`zuly`,`str`,`dex`,`_int`, `con`,`cha`,`sen`,`curHp`,`curMp`,`id`,`statp`,`skillp`,`exp`,`stamina`,`quickbar`,`basic_skills`,`askill`,`askilllvl`,`pskill`,`pskilllvl`,`respawnid`,`clanid`,`clan_rank`,`townid` FROM `characters` WHERE `char_name`='UltimateWarrior'
+SELECT unionid,union1points,union2points,union3points,union4points,union5points,union6points,union7points,union8points,union9points,union10points FROM characters WHERE char_name='UltimateWarrior'
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum,count,stats,socketed,appraised,gem FROM items WHERE owner=6
+SELECT itemnum,itemtype,refine,durability,lifespan,slotnum,count,stats,socketed,appraised,gem FROM storage WHERE owner=6
+SELECT quests from list_quest where owner=6
+UPDATE accounts SET online=1 where id=6
