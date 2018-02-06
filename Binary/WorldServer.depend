@@ -1,0 +1,280 @@
+# depslib dependency file v1.0
+1390574650 source:f:\triggersoft\osirose\common\socketbase.cpp
+	"sockets.h"
+
+1390845001 f:\triggersoft\osirose\common\sockets.h
+	<windows.h>
+	<winsock2.h>
+	<unistd.h>
+	<netinet/in.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<arpa/inet.h>
+	<sys/ioctl.h>
+	<cstdarg>
+	<errno.h>
+	<mysql/mysql.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<vector>
+	<string>
+	<cstdio>
+	<exception>
+	<time.h>
+	<assert.h>
+	<math.h>
+	<cmath>
+	<map>
+	<pthread.h>
+	<vector>
+	<csignal>
+	"log.h"
+	"rosecrypt.hpp"
+	"config.h"
+	"database/database.h"
+
+1390574650 f:\triggersoft\osirose\common\log.h
+
+1390844864 f:\triggersoft\osirose\common\rosecrypt.hpp
+
+1390574650 f:\triggersoft\osirose\common\config.h
+
+1390574650 f:\triggersoft\osirose\common\database\database.h
+	"../sockets.h"
+
+1390846722 source:f:\triggersoft\osirose\common\socketclient.cpp
+	"sockets.h"
+	"config.h"
+
+1390574650 source:f:\triggersoft\osirose\common\socketserver.cpp
+	"sockets.h"
+
+1390574650 source:f:\triggersoft\osirose\common\config.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<ctype.h>
+
+1390574650 source:f:\triggersoft\osirose\common\database\database.cpp
+	"database.h"
+	"../log.h"
+
+1390574650 source:f:\triggersoft\osirose\common\globals.cpp
+	"sockets.h"
+
+1390574650 source:f:\triggersoft\osirose\common\log.cpp
+	<conio.h>
+	<windows.h>
+	<cstdio>
+	<cstdio>
+	"log.h"
+
+1390844778 source:f:\triggersoft\osirose\common\rosecrypt.cpp
+	<fstream>
+	<iostream>
+	"rosecrypt.hpp"
+	<cstdlib>
+
+1390574657 source:f:\triggersoft\osirose\world server\buff.cpp
+	"worldserver.h"
+
+1390574657 f:\triggersoft\osirose\world server\worldserver.h
+	"../common/sockets.h"
+	"worldmonster.h"
+	"quest/CRoseArray.hpp"
+	"quest/CRoseFile.hpp"
+	"quest/CStrStb.hpp"
+	"quest/CIntStb.hpp"
+	"quest/QuestTrigger.h"
+	"aip/Aip.h"
+	"worldmap.h"
+	"player.h"
+	"character.h"
+	"party.h"
+	"datatypes.h"
+	"stbhandler.h"
+	"strhashing.h"
+	"math.h"
+
+1390574652 f:\triggersoft\osirose\world server\worldmonster.h
+	"character.h"
+	"player.h"
+	"worldserver.h"
+
+1390574652 f:\triggersoft\osirose\world server\character.h
+	"chartype.h"
+
+1390574657 f:\triggersoft\osirose\world server\chartype.h
+	"datatypes.h"
+
+1390574656 f:\triggersoft\osirose\world server\datatypes.h
+	"../common/sockets.h"
+
+1390574655 f:\triggersoft\osirose\world server\player.h
+	"character.h"
+
+1390574656 f:\triggersoft\osirose\world server\quest\crosearray.hpp
+	<memory.h>
+
+1390574656 f:\triggersoft\osirose\world server\quest\crosefile.hpp
+	<stdio.h>
+	<stdlib.h>
+	"CRoseArray.hpp"
+
+1390574656 f:\triggersoft\osirose\world server\quest\cstrstb.hpp
+
+1390574657 f:\triggersoft\osirose\world server\quest\cintstb.hpp
+
+1390574657 f:\triggersoft\osirose\world server\quest\questtrigger.h
+	"QuestConditions.h"
+	"QuestActions.h"
+
+1390574656 f:\triggersoft\osirose\world server\quest\questconditions.h
+
+1390574656 f:\triggersoft\osirose\world server\quest\questactions.h
+
+1390574652 f:\triggersoft\osirose\world server\aip\aip.h
+	"AiConditions.h"
+	"AiActions.h"
+
+1390574653 f:\triggersoft\osirose\world server\aip\aiconditions.h
+
+1390574652 f:\triggersoft\osirose\world server\aip\aiactions.h
+
+1390574657 f:\triggersoft\osirose\world server\worldmap.h
+	"worldserver.h"
+	"player.h"
+	"character.h"
+	"worldmonster.h"
+	"datatypes.h"
+
+1390574656 f:\triggersoft\osirose\world server\party.h
+	"worldserver.h"
+	"datatypes.h"
+
+1390574655 f:\triggersoft\osirose\world server\stbhandler.h
+	"worldserver.h"
+
+1390574652 f:\triggersoft\osirose\world server\strhashing.h
+
+1390574657 source:f:\triggersoft\osirose\world server\mainprocess.cpp
+	"worldserver.h"
+
+1390574657 source:f:\triggersoft\osirose\world server\monster.cpp
+	"worldmonster.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\monsterevents.cpp
+	"worldmonster.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\monsterstats.cpp
+	"worldmonster.h"
+
+1390574655 source:f:\triggersoft\osirose\world server\party.cpp
+	"worldserver.h"
+
+1390574655 source:f:\triggersoft\osirose\world server\serverfunctions.cpp
+	"worldserver.h"
+
+1390574655 source:f:\triggersoft\osirose\world server\worldmonster.cpp
+	"worldmonster.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\worldprocess.cpp
+	"worldserver.h"
+
+1390574653 source:f:\triggersoft\osirose\world server\aip\aiactions.cpp
+	"../WorldServer.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\aip\aiconditions.cpp
+	"../WorldServer.h"
+
+1390574653 source:f:\triggersoft\osirose\world server\aip\aip.cpp
+	"../WorldServer.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\battle.cpp
+	"character.h"
+	"worldserver.h"
+
+1390574655 source:f:\triggersoft\osirose\world server\character.cpp
+	"character.h"
+	"worldserver.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\charevent.cpp
+	"character.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\charfunctions.cpp
+	"character.h"
+	"worldserver.h"
+
+1390574659 source:f:\triggersoft\osirose\world server\charstats.cpp
+	"character.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\clan.cpp
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\extrafunctions.cpp
+	"worldserver.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\gmcmds.cpp
+	"worldserver.h"
+
+1390574657 source:f:\triggersoft\osirose\world server\itemdata.cpp
+	"datatypes.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\main.cpp
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\mapfunctions.cpp
+	"worldmap.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\monsterfunctions.cpp
+	"worldmonster.h"
+
+1390574657 source:f:\triggersoft\osirose\world server\partyfunctions.cpp
+	"party.h"
+
+1390574659 source:f:\triggersoft\osirose\world server\player.cpp
+	"player.h"
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\playerdata.cpp
+	"player.h"
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\playerfunctions.cpp
+	"player.h"
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\playerquest.cpp
+
+1390574652 source:f:\triggersoft\osirose\world server\playerstats.cpp
+	"player.h"
+	"worldserver.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\quest\questactions.cpp
+	"../WorldServer.h"
+
+1390574657 source:f:\triggersoft\osirose\world server\quest\questconditions.cpp
+	"../WorldServer.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\quest\quests.cpp
+	"../WorldServer.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\startup.cpp
+	"worldserver.h"
+
+1390574657 source:f:\triggersoft\osirose\world server\stbhandler.cpp
+	"worldserver.h"
+
+1390574656 source:f:\triggersoft\osirose\world server\strhashing.cpp
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\worldmap.cpp
+	"worldmap.h"
+
+1391098522 source:f:\triggersoft\osirose\world server\worldpackets.cpp
+	"worldserver.h"
+
+1390574652 source:f:\triggersoft\osirose\world server\worldserver.cpp
+	"worldserver.h"
+

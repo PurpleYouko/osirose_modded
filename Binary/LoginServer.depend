@@ -1,0 +1,99 @@
+# depslib dependency file v1.0
+1390574650 source:f:\triggersoft\osirose\common\socketbase.cpp
+	"sockets.h"
+
+1390845001 f:\triggersoft\osirose\common\sockets.h
+	<windows.h>
+	<winsock2.h>
+	<unistd.h>
+	<netinet/in.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<arpa/inet.h>
+	<sys/ioctl.h>
+	<cstdarg>
+	<errno.h>
+	<mysql/mysql.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<vector>
+	<string>
+	<cstdio>
+	<exception>
+	<time.h>
+	<assert.h>
+	<math.h>
+	<cmath>
+	<map>
+	<pthread.h>
+	<vector>
+	<csignal>
+	"log.h"
+	"rosecrypt.hpp"
+	"config.h"
+	"database/database.h"
+
+1390574650 f:\triggersoft\osirose\common\log.h
+
+1390844864 f:\triggersoft\osirose\common\rosecrypt.hpp
+
+1390574650 f:\triggersoft\osirose\common\config.h
+
+1390574650 f:\triggersoft\osirose\common\database\database.h
+	"../sockets.h"
+
+1390574650 source:f:\triggersoft\osirose\common\socketserver.cpp
+	"sockets.h"
+
+1390574650 source:f:\triggersoft\osirose\common\config.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<ctype.h>
+
+1390574650 source:f:\triggersoft\osirose\common\database\database.cpp
+	"database.h"
+	"../log.h"
+
+1390574650 source:f:\triggersoft\osirose\common\globals.cpp
+	"sockets.h"
+
+1390574650 source:f:\triggersoft\osirose\common\log.cpp
+	<conio.h>
+	<windows.h>
+	<cstdio>
+	<cstdio>
+	"log.h"
+
+1390844778 source:f:\triggersoft\osirose\common\rosecrypt.cpp
+	<fstream>
+	<iostream>
+	"rosecrypt.hpp"
+	<cstdlib>
+
+1390574643 source:f:\triggersoft\osirose\login server\extrafunction.cpp
+	"loginserver.h"
+
+1390574643 f:\triggersoft\osirose\login server\loginserver.h
+	"../common/sockets.h"
+	"datatype.h"
+
+1390574642 f:\triggersoft\osirose\login server\datatype.h
+
+1390574642 source:f:\triggersoft\osirose\login server\loginpackets.cpp
+	"loginserver.h"
+
+1390574643 source:f:\triggersoft\osirose\login server\loginclient.cpp
+	"loginserver.h"
+
+1390922680 source:f:\triggersoft\osirose\login server\loginserver.cpp
+	"loginserver.h"
+
+1390574643 source:f:\triggersoft\osirose\login server\main.cpp
+	"loginserver.h"
+
+1391098756 source:f:\triggersoft\osirose\common\socketclient.cpp
+	"sockets.h"
+	"config.h"
+

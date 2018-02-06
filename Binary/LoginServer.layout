@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="default" />
+	<File name="..\Common\SocketClient.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="3910" topLine="138" />
+	</File>
+	<File name="..\Common\SocketServer.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="11225" topLine="356" />
+	</File>
+	<File name="..\Common\rosecrypt.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="3146" topLine="53" />
+	</File>
+	<File name="..\Common\rosecrypt.hpp" open="1" top="0" tabpos="3">
+		<Cursor position="2288" topLine="14" />
+	</File>
+	<File name="..\Common\sockets.h" open="1" top="0" tabpos="5">
+		<Cursor position="11415" topLine="0" />
+	</File>
+	<File name="..\Login Server\LoginPackets.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="1188" topLine="16" />
+	</File>
+	<File name="..\Login Server\loginserver.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="3968" topLine="91" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="default" />
+	<File name="..\Common\SocketClient.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="2647" topLine="60" />
+	</File>
+	<File name="..\Common\SocketServer.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="7360" topLine="199" />
+	</File>
+	<File name="..\Common\rosecrypt.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="10077" topLine="285" />
+	</File>
+	<File name="..\Common\sockets.h" open="1" top="0" tabpos="6">
+		<Cursor position="8375" topLine="228" />
+	</File>
+	<File name="..\World Server\MainProcess.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\World Server\Worldprocess.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="6928" topLine="94" />
+	</File>
+	<File name="..\World Server\datatypes.h" open="1" top="0" tabpos="5">
+		<Cursor position="10537" topLine="459" />
+	</File>
+	<File name="..\World Server\player.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="3873" topLine="122" />
+	</File>
+	<File name="..\World Server\player.h" open="1" top="0" tabpos="8">
+		<Cursor position="2664" topLine="64" />
+	</File>
+	<File name="..\World Server\playerfunctions.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="4280" topLine="40" />
+	</File>
+	<File name="..\World Server\worldpackets.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="65399" topLine="1647" />
+	</File>
+	<File name="..\World Server\worldserver.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="31865" topLine="851" />
+	</File>
+</CodeBlocks_layout_file>
