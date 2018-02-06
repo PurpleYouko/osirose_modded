@@ -269,18 +269,6 @@ QUESTREWD(003)
         case sStatPoints:
             if (!OperateValues<int>(curAbil->btOp, (int*)&client->CharInfo->StatPoints, curAbil->iValue))
                 return QUEST_FAILURE;
-
-            // FJMK -- Begin Code
-            // May 2013
-            // Quest Rewards Statpoins Implementation
-            RESETPACKET( pak, 0x720 );
-            ADDWORD( pak, 32 );
-            ADDWORD( pak, curAbil->iValue );
-            ADDWORD( pak, 0 );
-            client->client->SendPacket( &pak );
-
-            server->SendPM(client, "[Quest Reward] You reveived %i statpoints.", curAbil->iValue);
-            // FJMK -- End Code
             break;
         case sMoney:
         {

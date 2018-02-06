@@ -725,8 +725,18 @@ bool CWorldServer::LoadMonsters()
 #else
     for(UINT i = 0; i < MapList.Map.size(); i++) {
       CMap *thismap = MapList.Map.at(i);
+      if(thismap == NULL)
+      {
+        Log(MSG_WARNING,"Bad map ID value at index %i", i);
+        continue;        
+      }
       for(UINT j = 0; j < thismap->MobGroupList.size(); j++) {
         CMobGroup* thisgroup = thismap->MobGroupList.at(j);
+        if(thisgroup == NULL)
+        {
+          Log(MSG_WARNING,"Invalid mob group at index %j",j); 
+          continue;            
+        }
         // Load some basic mobs onto map
         for(UINT k = 0; k < thisgroup->limit; k++) {
           CMob* thismob = thisgroup->basicMobs.at(thisgroup->curBasic);

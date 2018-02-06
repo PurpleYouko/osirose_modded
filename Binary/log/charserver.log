@@ -4,14 +4,6 @@ Connected to MySQL server
 opened ISC poort 29110
 Clans Information Loaded
 Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-User connected from 127.0.0.1
-User 'purpleyouko'(#6) logged in
-User purpleyouko(6) selected char 'purpleyouko'
-User disconnected
-Server disconnected
 Connecting to MySQL
 MySQL Ping Timeout: 28740 seconds
 Connected to MySQL server
@@ -19,123 +11,6 @@ opened ISC poort 29110
 Clans Information Loaded
 Server started on port 29100 and is listening.
 Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-Server disconnected
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-Could not bind socket
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-Server disconnected
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-Server disconnected
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-User connected from 127.0.0.1
-Packet Received containing Bytes 6
-Packet size is 42. Continue receiving
-Packet Received containing Bytes 36
-User 'purpleyouko'(#6) logged in
-Sending a packet containing 15 bytes
-Packet Received containing Bytes 6
-Sending a packet containing 328 bytes
-Packet Received containing Bytes -1
-User disconnected
-User connected from 127.0.0.1
-Packet Received containing Bytes 6
-Packet size is 42. Continue receiving
-Packet Received containing Bytes 36
-User 'purpleyouko'(#6) logged in
-Sending a packet containing 15 bytes
-Packet Received containing Bytes 6
-Sending a packet containing 328 bytes
-Packet Received containing Bytes 6
-Packet size is 21. Continue receiving
-Packet Received containing Bytes 15
-User purpleyouko(6) selected char 'purpleyouko'
-Sending a packet containing 26 bytes
-Sending a packet containing 8 bytes
-Sending a packet containing 177 bytes
-Packet Received containing Bytes 0
-User disconnected
 Server disconnected
 Connecting to MySQL
 MySQL Ping Timeout: 28740 seconds
@@ -147,23 +22,10 @@ Server connected from 127.0.0.1
 Channel #2 connected from ip 127.0.0.1
 Accessing worldserver IP: 127.0.0.1 , Port: 29210
 User connected from 127.0.0.1
-Packet Received containing Bytes 6
-Packet size is 42. Continue receiving
-Packet Received containing Bytes 36
 User 'purpleyouko'(#6) logged in
-Sending (SID: 00001804) containing 15 bytes
-Packet Received containing Bytes 6
-Sending (SID: 00001810) containing 328 bytes
-Packet Received containing Bytes 6
-Packet size is 21. Continue receiving
-Packet Received containing Bytes 15
 User purpleyouko(6) selected char 'purpleyouko'
-Sending (SID: 00001809) containing 26 bytes
-Sending (SID: 00002017) containing 8 bytes
-Sending (SID: 00002016) containing 177 bytes
-Packet Received containing Bytes -1
-User disconnected
 Server disconnected
+User disconnected
 Connecting to MySQL
 MySQL Ping Timeout: 28740 seconds
 Connected to MySQL server
@@ -171,220 +33,13 @@ opened ISC poort 29110
 Clans Information Loaded
 Server started on port 29100 and is listening.
 Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'PurpleDestroyer'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 24
-User purpleyouko(6) selected char 'PurpleGuardian'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
 Server disconnected
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
+Server connected from 127.0.0.1
+Server disconnected
 Server connected from 127.0.0.1
 Channel #2 connected from ip 127.0.0.1
 Accessing worldserver IP: 127.0.0.1 , Port: 29210
 User connected from 127.0.0.1
-Received 070b containing Bytes 42
 User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'UltimateWarrior'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
 User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'UltimateWarrior'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
-User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'PurpleDestroyer'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'UltimateWarrior'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-Server disconnected
-Connecting to MySQL
-MySQL Ping Timeout: 28740 seconds
-Connected to MySQL server
-opened ISC poort 29110
-Clans Information Loaded
-Server started on port 29100 and is listening.
-Server connected from 127.0.0.1
-Channel #2 connected from ip 127.0.0.1
-Accessing worldserver IP: 127.0.0.1 , Port: 29210
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'UltimateWarrior'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
-User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
-User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
-User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 24
-User purpleyouko(6) selected char 'PurpleGuardian'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
-User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 21
-User purpleyouko(6) selected char 'purpleyouko'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-Sending pak 07e0 containing 177 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'PurpleDestroyer'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
-User connected from 127.0.0.1
-Received 070b containing Bytes 42
-User 'purpleyouko'(#6) logged in
-Sending pak 070c containing 15 bytes
-Received 0712 containing Bytes 6
-Sending pak 0712 containing 328 bytes
-Received 0715 containing Bytes 25
-User purpleyouko(6) selected char 'UltimateWarrior'
-Sending pak 0711 containing 26 bytes
-Sending pak 07e1 containing 8 bytes
-User disconnected
 Server disconnected

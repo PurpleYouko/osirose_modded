@@ -3,11 +3,11 @@
 REM - Default values
 set bin=-1
 set user=root
-set pass=-1
-set db=prose
+set pass=sproggins
+set db=osirose
 set host=localhost
 echo.
-echo                  ===== OSpRose Online Database Installer ======
+echo                  ===== OSiRose Online Database Installer ======
 echo.
 REM - Get MySQL Bin Path
 :getbin

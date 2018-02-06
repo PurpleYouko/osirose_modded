@@ -334,8 +334,7 @@ public:
     bool			isActive;			// Is this socket connected?
     bool            isserver;
     CCryptTable*	CryptTable;			// This is for decrypting incomming packets
-//#ifdef USE124
-#ifdef EXJAM
+#ifdef USE124
     char* csum;
     int csumlen;
 #endif
@@ -356,8 +355,7 @@ public:
     bool ISCThread(); // Raven0123
     struct sockaddr_in clientinfo;
     void* player;
-//#ifdef USE124
-#ifdef EXJAM
+#ifdef USE124
     char* ct;
 #endif
 private:

@@ -667,6 +667,7 @@ struct CNPCData {
     UINT aggresive;
     UINT shp;
     UINT dialogid;
+    UINT eventid;
 
     UINT side;
     UINT sidechance;

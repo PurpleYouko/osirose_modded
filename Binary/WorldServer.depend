@@ -43,7 +43,7 @@
 1390574650 f:\triggersoft\osirose\common\database\database.h
 	"../sockets.h"
 
-1390846722 source:f:\triggersoft\osirose\common\socketclient.cpp
+1391098756 source:f:\triggersoft\osirose\common\socketclient.cpp
 	"sockets.h"
 	"config.h"
 

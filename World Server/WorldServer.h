@@ -38,7 +38,6 @@
 #include "datatypes.h"
 #include "stbhandler.h"
 #include "strhashing.h"
-#include "math.h"
 
 #define MAXVISUALRANGE 90
 #define MINVISUALRANGE 80
@@ -167,8 +166,6 @@ public:
     void DoFairyStuff( CPlayer* targetclient, int action );
     void DoFairyFree( int fairy );
 
-    // Repair Price (extrafunctions.cpp)
-    LONG Repairprice(UINT price, UINT durability, UINT lifespan);
     //------------------ MATH (extrafunctions.cpp)
     fPoint RandInCircle(fPoint center, float radius);
     fPoint RandInPoly(fPoint p[], int pcount);
@@ -387,6 +384,7 @@ public:
     vector<CAip*> AipList;
     fpAiCond aiCondFunc[31];
     fpAiAct aiActFunc[38];
+    int ObjVar[2000][20];  //NPC variables used in AI
     //int AIindex[500][6][20][1];
 
     clock_t				   lastServerStep;			// Last Update

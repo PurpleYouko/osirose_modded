@@ -99,6 +99,8 @@ class CPlayer: public CCharacter
         bool Regeneration( );
         bool PlayerHeal( );
         bool VisiblityList( );
+        //bool ChangeDialog( unsigned int npc, unsigned int dialog );
+        bool ChangeDialog( unsigned int npc, unsigned int dialog, unsigned int eventid = 0 );
         bool SpawnToPlayer( CPlayer* player, CPlayer* otherclient );
         bool UpdateValues( );
         void ReduceABC( );

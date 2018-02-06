@@ -296,6 +296,48 @@ bool CPlayer::VisiblityList( )
 
 }
 
+/*bool CPlayer::ChangeDialog(unsigned int npc, unsigned int dialog )
+{
+    CMap* map = GServer->MapList.Index[Position->Map];
+    for(unsigned i=0; i<map->NPCList.size(); i++) 
+    {
+        CNPC* thisnpc = map->NPCList.at(i);
+        
+        if(thisnpc->thisnpc->id = npc)
+        {
+            CNPC* newnpc = thisnpc;
+            map->DeleteNPC(thisnpc);
+            newnpc->thisnpc->dialogid = dialog; 
+            GServer->pakSpawnNPC (this, newnpc);
+        }     
+    }
+    return true;
+}*/
+
+bool CPlayer::ChangeDialog(unsigned int npc, unsigned int dialog, unsigned int eventid )
+{
+    CMap* map = GServer->MapList.Index[Position->Map];
+    if(map == NULL)
+        return true;
+    for(unsigned i=0; i<map->NPCList.size(); i++)
+    {
+        CNPC* thisnpc = map->NPCList.at(i);
+
+        if(thisnpc->npctype == npc)
+        {
+            //Log(MSG_INFO,"Found NPC %i with dialog %i",thisnpc->npctype, thisnpc->thisnpc->dialogid);
+            CNPC* newnpc = thisnpc;
+            this->ClearObject( thisnpc->clientid );
+            newnpc->thisnpc->dialogid = dialog;
+            newnpc->thisnpc->eventid = eventid;
+            GServer->ObjVar[npc][0] = eventid;
+            VisibleNPCs.push_back( newnpc );
+            GServer->pakSpawnNPC( this, newnpc );
+        }
+    }
+    return true;
+}
+
 
 // Returns a free slot in the inventory (0xffff if is full)
 UINT CPlayer::GetNewItemSlot( CItem thisitem )

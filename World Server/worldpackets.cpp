@@ -342,11 +342,10 @@ bool CWorldServer::pakDoIdentify( CPlayer *thisclient, CPacket *P )
     pakInventory(thisclient);
     pakQuestData(thisclient);
 
-    //0x7DE disabled for ExJam's client
-    //RESETPACKET( pak, 0x7de );
-    //ADDWORD ( pak, 0x1001 ); // 0x1001 to 0x1013 (game plan?)
-    //ADDDWORD ( pak, 2 ); // options (plan time?) [2 = unlimited]
-    //thisclient->client->SendPacket( &pak );
+    RESETPACKET( pak, 0x7de );
+    ADDWORD ( pak, 0x1001 ); // 0x1001 to 0x1013 (game plan?)
+    ADDDWORD ( pak, 2 ); // options (plan time?) [2 = unlimited]
+    thisclient->client->SendPacket( &pak );
 
     /*	RESETPACKET( pak, 0x702 );
     	ADDSTRING  ( pak, Config.WELCOME_MSG );
@@ -549,8 +548,16 @@ bool CWorldServer::pakSpawnNPC( CPlayer* thisclient, CNPC* thisnpc )
         ADDWORD( pak, thisnpc->npctype - 900 );
     }
     ADDFLOAT( pak, thisnpc->dir );
-    if (thisnpc->npctype == 1115) ADDBYTE( pak, GServer->Config.Cfmode ) // Burland Clan Field open/close
-        else ADDBYTE ( pak, 0 );
+    //if (thisnpc->npctype == 1115) ADDBYTE( pak, GServer->Config.Cfmode ) // Burland Clan Field open/close
+    //    else ADDBYTE ( pak, 0 );
+    if(thisnpc->thisnpc->eventid != 0)
+    {
+        ADDBYTE (pak, thisnpc->thisnpc->eventid);
+    }
+    else
+    {
+        ADDBYTE( pak, 0 );
+    }
     ADDBYTE( pak, 0 );
     thisclient->client->SendPacket( &pak );
     return true;
@@ -623,7 +630,8 @@ bool CWorldServer::pakChangeStance( CPlayer* thisclient, CPacket* P )
         thisclient->Status->Stance = RUNNING;
         break;
     }
-
+//	if(!thisclient->Status->CanMove)
+//	   thisclient->Status->Stance = RUNNING;
     if (!thisclient->Status->CanRun && newstancenum == 3)
     {
         newstancenum = 2;
@@ -2774,14 +2782,9 @@ bool CWorldServer::pakStorage( CPlayer* thisclient, CPacket* P)
     return true;
 }
 
-
+// Change Storage (Deposit/Withdraw items)
 bool CWorldServer::pakChangeStorage( CPlayer* thisclient, CPacket* P)
 {
-    // Change Storage (Deposit/Withdraw items)
-    // Modified by FransK ; storing items now cost money.
-    // Thanks to [?] for already providing the function GetStorageFee
-    // May 2013.
-
     /* Packet for this function
        ===========================
        [BYTE] Action
@@ -2789,13 +2792,9 @@ bool CWorldServer::pakChangeStorage( CPlayer* thisclient, CPacket* P)
        [WORD] Item Head
        [DWORD] Item Body
        [BYTE] Unk (0x00)
+
     */
-
-    UINT bprice=0;             // Item Price      (from STB)
-    UINT bpricerate=0;         // Item Price Rate (from STB)
-    UINT bfee=0;               // Storage Fee     (Calculated)
     BYTE action = GETBYTE((*P),0);
-
     switch (action)
     {
     case 0x00: //Deposit
@@ -2805,102 +2804,52 @@ bool CWorldServer::pakChangeStorage( CPlayer* thisclient, CPacket* P)
 
         if (!CheckInventorySlot( thisclient, itemslot ))
             return false;
-
         CItem newitem = thisclient->items[itemslot];
         // Set the newitem's count to the count from the client for slot search
         newitem.count = clientitem.count;
 
+        Log(MSG_INFO, "New Item: %i %i", newitem.itemtype, newitem.itemnum);
         // find an empty or matching slot depending on new item type
         int newslot = thisclient->GetNewStorageItemSlot ( newitem );
         if (newslot==0xffff)
             return true;
 
-        int count = clientitem.count;
-        // Stops players from storing more items than they actually have.
-        if (count > thisclient->items[itemslot].count)
-            count = thisclient->items[itemslot].count;
+        if (newitem.itemtype >= 10 && newitem.itemtype <= 12) //is it a stackable type
+        {
+            int count = clientitem.count;
+            if (count > thisclient->items[itemslot].count)
+                count = thisclient->items[itemslot].count; //stops players transferring more than they actually have
+            newitem.count = count;
 
-        // Set the desired amount
-        newitem.count = count;
-
-        Log(MSG_INFO, "Request storage by %s, type=%i id=%i, amount=%i",thisclient->CharInfo->charname, newitem.itemtype, newitem.itemnum, newitem.count);
-
-        // Retreive Price information for the item from the STB. Different item types are stored in different tables.
-        if(newitem.itemtype<10)
-            {
-            bprice = EquipList[newitem.itemtype].Index[newitem.itemnum]->price;
-            bpricerate = EquipList[newitem.itemtype].Index[newitem.itemnum]->pricerate;
-            }
-        else
-            {
-            switch(newitem.itemtype){
-                case CONSUMIBLE:
-                    bprice = GServer->UseList.Index[newitem.itemnum]->price;
-                    bpricerate = GServer->UseList.Index[newitem.itemnum]->pricerate;
-                    break;
-                case JEM:
-                    bprice = JemList.Index[newitem.itemnum]->price;
-                    bpricerate = JemList.Index[newitem.itemnum]->pricerate;
-                    break;
-                case NATURAL:
-                    bprice = NaturalList.Index[newitem.itemnum]->price;
-                    bpricerate = NaturalList.Index[newitem.itemnum]->pricerate;
-                    break;
-                case PAT:
-                    bprice = PatList.Index[newitem.itemnum]->price;
-                    bpricerate = PatList.Index[newitem.itemnum]->pricerate;
-                    break;
-                }
-            }
-
-        // Ok, we got all STB item info, now calculate the storage fee.
-        bfee = GetStorageFee(bprice,bpricerate, clientitem.count);
-
-        // Check if client has enough zulies to complete the transaction.
-        if (thisclient->CharInfo->Zulies >=bfee){
-
-            if (newitem.itemtype >= 10 && newitem.itemtype <= 12) {
-                //is it a stackable type, so must do some math with item counts etc.
-                UINT bfee = GetStorageFee(bprice,bpricerate, clientitem.count);
-
-                //add the new items to the storage slot
-                if (thisclient->storageitems[newslot].count > 0)
-                    thisclient->storageitems[newslot].count += newitem.count;
-                else
-                    thisclient->storageitems[newslot] = newitem;
-
-                //delete the items from inventory slot
-                thisclient->items[itemslot].count -= count;
-
-                //Remove item + amount from client inventory slot
-                if (thisclient->items[itemslot].count <= 0)
-                    ClearItem(thisclient->items[itemslot]);
-            } else {
-                // This item is not stackable, so remove it from client inventory slot and add to storage slot.
-                ClearItem(thisclient->items[itemslot]);
+            if (thisclient->storageitems[newslot].count > 0)
+                thisclient->storageitems[newslot].count += newitem.count; //add the new items to the storage slot
+            else
                 thisclient->storageitems[newslot] = newitem;
-            }
 
-            // Take the money.
-            thisclient->CharInfo->Zulies -=bfee;
-
-        } else {
-            // Not Enough Zulie; too bad. Client already pops up a messagbox so we don't have to.
+            thisclient->items[itemslot].count -= count; //delete the items from inventory slot
+            if (thisclient->items[itemslot].count <= 0)
+                ClearItem(thisclient->items[itemslot]);
+        }
+        else
+        {
+            // non-stackable
+            ClearItem(thisclient->items[itemslot]);
+            thisclient->storageitems[newslot] = newitem;
         }
 
         BEGINPACKET( pak, 0x7ae );
         ADDWORD    ( pak, itemslot );
         ADDWORD    ( pak, newslot );
-        ADDWORD    ( pak, BuildItemHead( thisclient->items[itemslot] ) );
+        ADDWORD   ( pak, BuildItemHead( thisclient->items[itemslot] ) );
         ADDDWORD   ( pak, BuildItemData( thisclient->items[itemslot] ) );
-        ADDWORD    ( pak, BuildItemHead( thisclient->storageitems[newslot] ) );
+        ADDWORD   ( pak, BuildItemHead( thisclient->storageitems[newslot] ) );
         ADDDWORD   ( pak, BuildItemData( thisclient->storageitems[newslot] ) );
         ADDQWORD   ( pak, thisclient->CharInfo->Zulies );
         ADDBYTE    ( pak, 0x00 );
         thisclient->client->SendPacket( &pak );
+        //thisclient->nstorageitems++;  //this is pointless and serves no purpose
     }
     break;//thanks to anon for post that this break was missing
-
     case 0x01: //Withdraw
     {
         BYTE storageslot = GETBYTE((*P),1);
@@ -2918,10 +2867,8 @@ bool CWorldServer::pakChangeStorage( CPlayer* thisclient, CPacket* P)
         if (newslot == 0xffff)
             return true;
 
-
         if (newitem.itemtype>9 && newitem.itemtype<14)
         {
-            // This is a useitem.
             WORD count = clientitem.count;
             if ( count > thisclient->storageitems[storageslot].count )
                 count = thisclient->storageitems[storageslot].count;
@@ -2937,7 +2884,6 @@ bool CWorldServer::pakChangeStorage( CPlayer* thisclient, CPacket* P)
                 ClearItem(thisclient->storageitems[storageslot]);
         }
         else
-        //type 1 to 8; Clothing and other stuff that is not stackable etc.
         {
             ClearItem(thisclient->storageitems[storageslot]);
             thisclient->items[newslot] = newitem;
@@ -2953,10 +2899,11 @@ bool CWorldServer::pakChangeStorage( CPlayer* thisclient, CPacket* P)
         ADDQWORD   ( pak, thisclient->CharInfo->Zulies );
         ADDBYTE    ( pak, 0x00 );
         thisclient->client->SendPacket( &pak );
+        //thisclient->nstorageitems--; //this is pointless and serves no purpose
     }
     break;
     default:
-        Log( MSG_INFO, "Storage unknown action: %i ", action);
+        Log( MSG_INFO, "Storage unknow action: %i ", action);
     }
     return true;
 }
@@ -3641,6 +3588,7 @@ bool CWorldServer::pakModifiedItem( CPlayer* thisclient, CPacket* P )
         if ( success )
         {
             thisclient->items[item].refine = nextlevel*16;
+            thisclient->items[item].durability += nextlevel;
             ADDBYTE    ( pak, 0x10 );//successful
         }
         else
@@ -3652,6 +3600,7 @@ bool CWorldServer::pakModifiedItem( CPlayer* thisclient, CPacket* P )
             else
             {
                 thisclient->items[item].refine = (nextlevel-2)*16;
+                thisclient->items[item].durability -= (nextlevel - 1 + nextlevel - 2);
             }
             ADDBYTE    ( pak, 0x11 );//Fail
         }
@@ -3746,14 +3695,10 @@ bool CWorldServer::pakRepairHammer( CPlayer* thisclient, CPacket* P )
 }
 // Repair npc
 bool CWorldServer::pakRepairItem( CPlayer* thisclient, CPacket* P )
-// FJMK May 2013: fixed the function, it now needs zulie.
-// Cost are calculated in function Repairprice, located in Extrafunctions.cpp
 {
     BYTE action = GETBYTE((*P),0);
     switch (action)
     {
-    case 16:    // The weapon dude in zant (found by FransK)
-    case 108:   // The weapon dude in zant (found by FransK)
     case 39:
     case 97:
     case 18:
@@ -3769,25 +3714,10 @@ bool CWorldServer::pakRepairItem( CPlayer* thisclient, CPacket* P )
         BYTE slot = GETBYTE((*P),2);
         if (!CheckInventorySlot( thisclient, slot)) return false;
         if (thisclient->items[slot].count<1) return true;
-
-        CItem thisitem=thisclient->items[slot];
-        LONG bprice = EquipList[thisitem.itemtype].Index[thisitem.itemnum]->price;
-        // Get the repair cost.
-
-        LONG bcost=Repairprice(bprice,thisitem.durability,thisitem.lifespan);
-
-        if (thisclient->CharInfo->Zulies >= bcost){
-            // Client has enough zulies
-            // Take money and repair.
-            thisclient->CharInfo->Zulies -=bcost;
-            thisclient->items[slot].lifespan=100;
-            SendSysMsg( thisclient, "The item has been repaired." );
-        } else {
-            SendSysMsg( thisclient, "You don't have enough zuly to repair this item." );
-            return true;
-        }
-
-        // Send Packet to client.
+        //Log( MSG_INFO,"Item socketed?: %i", thisclient->items[slot].socketed);
+        thisclient->items[slot].lifespan = 100;
+        //Log( MSG_INFO,"Item socketed?: %i", thisclient->items[slot].socketed);
+        //Still TODO: find where prices of storage and repair are and add it to the code.
         BEGINPACKET( pak, 0x7cd );
         ADDQWORD   ( pak, thisclient->CharInfo->Zulies );
         ADDBYTE    ( pak, 0x01 );

@@ -1,7 +1,6 @@
 #ifndef __ROSE_SERVER__CRYPTION_ROUTINES__HEADER_FILE__
 #define __ROSE_SERVER__CRYPTION_ROUTINES__HEADER_FILE__
-//#define USE124  // means we are using a rose crypt table
-#define EXJAM      // trying to use ExJam's client
+//#define USE124
 //-------------------------------------------------------------------------
 // This structure contains generated tables, which are needed to
 // encrypt and decrypt packets.
@@ -11,7 +10,7 @@ struct CCryptTable
 	unsigned**			Tables;							// Main encryption table
 	unsigned short*		AddTable;						// Less important encryption table
 
-	unsigned			EncryptionStartValue;			// Start value for sending clients
+	unsigned			EncryptionStartValue;			// Start value for sending clients	
 };
 
 //-------------------------------------------------------------------------
@@ -41,8 +40,7 @@ bool DecryptBufferData				( CCryptTable *CryptTables, unsigned char *Buffer );
 void EncryptBuffer					( CCryptTable *CryptTables, unsigned char *Buffer );
 bool CryptISCPak( unsigned char* pak ); // Raven0123
 //-------------------------------------------------------------------------
-//#ifdef USE124
-#ifdef EXJAM
+#ifdef USE124
 #define TABLE_SIZE	(256+8)
 
 int buildChecksum(char* csum, char* path=0);

@@ -1,7 +1,6 @@
 #include <fstream>
 #include <iostream>
 #include "rosecrypt.hpp"
-#include <cstdlib>
 
 #define LOGINSERVER_CRYPTTABLE_START_VALUE 0x0042D266
 
@@ -57,7 +56,7 @@ unsigned ctGenerateNextValue( CCryptTable *CryptTables, CCryptTableControlStruct
 {
 	// Get the last value depending on the current TableMod.
 	int Value = ControlStruct->ValueTableMod[ ControlStruct->CurTableMod ];
-
+	
 	// Update generatecount, depending on the current TableMod
 	ControlStruct->CountTableMod            [ ControlStruct->CurTableMod ];
 
@@ -80,10 +79,8 @@ unsigned ctGenerateNextValue( CCryptTable *CryptTables, CCryptTableControlStruct
 		Value = (int(Value * 0x343FD) + 0x269EC3) & 0x7FFFFFFF;
 		ControlStruct->ValueTableMod[ 3 ] = Value;
 		return int(Value + (Value<0?0xFFFF:0)) >> 0x10;
-    default:
-        return 0;
 	}
-
+	
 	return 0;
 }
 
@@ -114,21 +111,21 @@ void GenerateCryptTables( CCryptTable* &CryptTables, unsigned ModValue )
 	// Allocate memory for structure
 	CryptTables			= (CCryptTable*)malloc(  sizeof( CCryptTable ) );
 	CryptTables->Tables	= (unsigned  **)calloc( 16, sizeof( unsigned ) );
-
+	
 	// Prepare values
 	ModValue = (int(ModValue * 0x41C64E6D) + 0x3039);
 	ModValue = int(ModValue + ((int)ModValue<0?0xFFFF:0)) >> 0x10;
 
 	// Startvalue for checksum variable for each user
 	CryptTables->EncryptionStartValue = ModValue;
-
+	
 	// set startvalues
 	for ( table=0; table<4; ++table )
 	{
 		ControlStruct.CountTableMod[ table ] = 0;
 		ControlStruct.ValueTableMod[ table ] = ModValue;
 	}
-
+	
 	// Generate TableMod list for creation
 	ControlStruct.CurTableMod = 0;
 	for ( table=0; table<0x11; ++table )
@@ -137,31 +134,31 @@ void GenerateCryptTables( CCryptTable* &CryptTables, unsigned ModValue )
 		if ( ivalue<0 ) ivalue = ( ( ivalue - 1 ) | 0xFFFFFFFC ) + 1;
 		TableFuncList[ table ] = ( unsigned char )ivalue;
 	}
-
+	
 	// Create tables
 	for ( table=0; table<16; ++table )
 	{
 		// Prepare creation loop for current table
 		CryptTables->Tables[ table ] 	= (unsigned*)calloc( 0x800, sizeof( unsigned ) );
 		ControlStruct.CurTableMod 		= TableFuncList[ table ] & 3;
-
+		
 		// Generate current table
 		entry = 0;
 		do
 		{
 			// Generate next value
 			value = ctGenerateNextValue( CryptTables, &ControlStruct );
-
+			
 			// Check, if value already exist in table 0
 			if ( ctValueExistsInTable( CryptTables, 0, value, entry ) ) continue;
-
+			
 			// Save value to memory
 			CryptTables->Tables[ table ][ entry ] = value;
-
+			
 			++entry;
 		} while ( entry<0x800 );
 	}
-
+	
 	// Generate additional table
 	CryptTables->AddTable		= (unsigned short*)calloc( 0x200, sizeof( unsigned short ) );
 	ControlStruct.CurTableMod	= table = (unsigned char)(TableFuncList[ 0x10 ]) & 3;
@@ -170,14 +167,14 @@ void GenerateCryptTables( CCryptTable* &CryptTables, unsigned ModValue )
 	{
 		// Generate next value
 		value = ctGenerateNextValue( CryptTables, &ControlStruct ) & 0x7FF;
-
+		
 		// Check, if value already exist
 		for ( ivalue=0; ivalue<=(int)entry; ++ivalue )
 			if ( (unsigned)CryptTables->AddTable[ivalue] == value ) { value=0xFFFFFFFF; break; }
 
 		// If value exist, continue
 		if ( value==0xFFFFFFFF ) continue;
-
+		
 		// Save value
 		CryptTables->AddTable[ entry++ ] = value;
 	} while ( entry<0x200 );
@@ -193,7 +190,7 @@ void GenerateLoginServerCryptTables( CCryptTable* &CryptTables )
 	unsigned short				entry;
 	unsigned					value;
 	int							ivalue;
-
+	
 	// Allocate memory for structure
 	CryptTables			= (CCryptTable*)malloc(  sizeof( CCryptTable ) );
 	CryptTables->Tables	= (unsigned  **)calloc( 16, sizeof( unsigned ) );
@@ -242,7 +239,7 @@ void GenerateLoginServerCryptTables( CCryptTable* &CryptTables )
 		ivalue *= 0x3E39B193;
 		value   = (0x3039 - (unsigned)ivalue) & 0x7FFFFFFF;
 		ControlStruct.ValueTableMod[1] = value;
-
+		
 		// Don't save, if value already exist
 		value  &= 0x7FF;
 		for ( ivalue=0; ivalue<=(int)entry; ++ivalue )
@@ -250,7 +247,7 @@ void GenerateLoginServerCryptTables( CCryptTable* &CryptTables )
 
 		// If value already exist, continue
 		if ( value==0xFFFFFFFF ) continue;
-
+		
 		// Save value to structure
 		CryptTables->AddTable[ entry ] = value;
 
@@ -264,16 +261,16 @@ void GenerateLoginServerCryptTables( CCryptTable* &CryptTables )
 void FreeCryptTables( CCryptTable* &CryptTables )
 {
 	unsigned char c;
-
+	
 	// Free every table
 	for ( c=0; c<16; ++c )
 		free( CryptTables->Tables[ c ] );
-
+		
 	// Free memory
 	free( CryptTables->AddTable );
 	free( CryptTables->Tables );
 	free( CryptTables );
-
+	
 	CryptTables = NULL;
 }
 
@@ -287,16 +284,16 @@ int DecryptBufferHeader( CCryptStatus *ri, CCryptTable *CryptTables, unsigned ch
 	CCryptBuffer		TempBuffer;
 	unsigned			BigBuffer;
 	unsigned char		c;
-
+	
 	// Read "AddTableValue" from buffer
 	BigBuffer			 		 = *((unsigned*)Buffer);
 	TempBuffer.AddTableValue	 = ( ( Buffer[4] >> 0x03 ) & 0x0007 ) | ( ( BigBuffer         ) & 0x0038 ) | \
 					   			   ( ( BigBuffer >> 0x03 ) & 0x01C0 ) | ( ( BigBuffer >> 0x11 ) & 0x0600 );
-
+	   
 	// Decrypt header in the buffer
 	for ( c=0; c<5; ++c )
 		Buffer[c]				^= CryptTables->Tables[ c ][ TempBuffer.AddTableValue ];
-
+	
 	BigBuffer			 		 = *((unsigned*)Buffer);
 	TempBuffer.EncryptValue		 = (   BigBuffer >> 0x0F ) & 0x0007 ;
 	TempBuffer.Command		 	 = ( ( BigBuffer >> 0x0C ) & 0x0007 ) | ( ( BigBuffer << 0x03 ) & 0x0038 ) | \
@@ -304,25 +301,25 @@ int DecryptBufferHeader( CCryptStatus *ri, CCryptTable *CryptTables, unsigned ch
 	TempBuffer.AddBufferLen		 = ( ( BigBuffer >> 0x06 ) & 0x0007 ) | ( ( BigBuffer >> 0x0F ) & 0x0038 ) | \
 								   ( ( BigBuffer >> 0x11 ) & 0x01C0 ) | ( ( Buffer[4] << 0x03 ) & 0x0600 );
 	TempBuffer.EncryptAddValue	 = ( ( BigBuffer >> 0x1E ) & 0x0003 ) | ( ( BigBuffer >> 0x13 ) & 0x000C );
-
+	
 	// Size correct?
 	if ( TempBuffer.AddBufferLen < 0x06 || TempBuffer.AddBufferLen > 0x400 )
 		return 0;
-
+	
 	// Header Checksum correct? ~ not implented yet ~
 /*
 	if ( ((unsigned)( TempBuffer.AddTableValue + TempBuffer.EncryptAddValue ) & 7 ) != \
 	     ((unsigned)( TempBuffer.EncryptValue                               ) & 7 ) )
 		return 0;
 */
-
+	
 	// Save CryptBuffer temporary to buffer for later use
 	*((unsigned*)Buffer) = *((unsigned     *)&TempBuffer)   ;
 	Buffer[4]			 =  ((unsigned char*)&TempBuffer)[4];
 
 	// Update encryption value
 	ri->CurEncryptionValue = ( ri->CurEncryptionValue * 0x343FD ) + 0x269EC3;
-
+	
 	// Everything went ok
 	return TempBuffer.AddBufferLen;
 }
@@ -336,19 +333,19 @@ bool DecryptBufferData( CCryptTable *CryptTables, unsigned char *Buffer )
 	CCryptBuffer		TempBuffer;
 	unsigned short		c, BufferLen;
 	unsigned char		CheckSum;
-
+	
 	// Read CryptBuffer from received buffer
 	*((unsigned     *)&TempBuffer)   	= *((unsigned*)Buffer);
 	 ((unsigned char*)&TempBuffer)[4]	= Buffer[4];
-
+	
 	// Calculate CheckSum for bufferheader
 	for ( CheckSum=0, c=0; c<5; ++c )
 		CheckSum = CheckSumTable[ (unsigned char)Buffer[ c ] ^ CheckSum ];
-
+	
 	// Calculate real buffer length and check it
 	BufferLen = (unsigned short)(TempBuffer.AddBufferLen - TempBuffer.EncryptValue);
 	if ( BufferLen < 0x06 ) return false;
-
+	
 	// Decrypt buffer data
 	if ( BufferLen > 0x06 )
 	{
@@ -359,15 +356,15 @@ bool DecryptBufferData( CCryptTable *CryptTables, unsigned char *Buffer )
 			CheckSum   = CheckSumTable      [ (unsigned char)Buffer[ c ] ^ CheckSum     ];
 		}
 	}
-
+	
 	// Check CheckSum
 	if ( Buffer[5] != CheckSum )
 		return false;
-
+	
 	// Complete buffer
 	*((unsigned short*)(Buffer  )) = BufferLen         ;
 	*((unsigned short*)(Buffer+2)) = TempBuffer.Command;
-
+	
 	return true;
 }
 
@@ -381,18 +378,18 @@ void EncryptBuffer( CCryptTable *CryptTables, unsigned char *Buffer )
 	unsigned short		c;
 	unsigned char		CheckSum;
 	unsigned			EncryptValue;
-
+	
 	// Generate some random values for encrypting
 	TempBuffer.AddTableValue	 = (rand( ) % 0x800);
 	TempBuffer.EncryptAddValue	 = (rand( ) % 0x10 );
 	TempBuffer.EncryptValue		 = TempBuffer.AddTableValue + TempBuffer.EncryptAddValue;
-
+	
 	// Fill other fields with values from Buffer
 	TempBuffer.AddBufferLen		 = *((unsigned short*)(Buffer  ));
 	TempBuffer.Command			 = *((unsigned short*)(Buffer+2));
-
-	// Build new bufferheader
-
+	
+	// Build new bufferheader	
+	
 	Buffer[4]				 = (((unsigned)TempBuffer.AddBufferLen            ) & 0x00000007 ) ^ \
 					   		   (((unsigned)TempBuffer.Command         >> 0x03 ) & 0x000000C0 );
 	EncryptValue			 = (((unsigned)TempBuffer.AddBufferLen    >> 0x03 ) & 0x00000007 );
@@ -404,17 +401,17 @@ void EncryptBuffer( CCryptTable *CryptTables, unsigned char *Buffer )
 	EncryptValue			|= (((unsigned)TempBuffer.EncryptValue    << 0x09 ) & 0x00000E00 );
 	EncryptValue			|= (((unsigned)TempBuffer.EncryptAddValue << 0x1A ) & 0x0C000000 );
 	EncryptValue			|= (((unsigned)TempBuffer.EncryptAddValue << 0x1C ) & 0xC0000000 );
-
+	
 	*((unsigned*)Buffer)		 = EncryptValue;
-
+	
 	// Encrypt bufferheader
 	for ( CheckSum=0, c=0; c<5; ++c )
 	{
 		CheckSum   = CheckSumTable      [ ((unsigned char*)&TempBuffer)[ c ] ^ CheckSum ];
 		Buffer[c] ^= CryptTables->Tables[ c ][ TempBuffer.AddTableValue ];
 	}
-
-
+	
+	
 	// Encrypt bufferdata if exists
 	if ( TempBuffer.AddBufferLen > 0x06 )
 	{
@@ -426,7 +423,7 @@ void EncryptBuffer( CCryptTable *CryptTables, unsigned char *Buffer )
 		}
 	}
 	Buffer[ 5 ] = CheckSum;
-
+	
 	// Complete bufferheader
 	EncryptValue			 = *((unsigned*)Buffer) & 0xFF9C7FC7;
 	EncryptValue			|= (((unsigned)TempBuffer.AddTableValue   << 0x03 ) & 0x00000038 );
@@ -445,8 +442,7 @@ bool CryptISCPak( unsigned char* pak )
 		return true;
 }
 
-#ifdef EXJAM
-//#ifdef USE124
+#ifdef USE124
 // This encryption code was taken from the dRose source. Not sure who to credit other than them.
 // To use 124 you will need the 124 trose.exe in your server directory.
 int buildChecksum(char* csum, char* path)

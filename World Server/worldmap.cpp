@@ -255,7 +255,7 @@ bool CMap::DeleteNPC( CNPC* npc )
     GServer->ClearClientID( npc->clientid );
     for (UINT j=0;j<NPCList.size();j++)
     {
-        if (npc==NPCList.at(j))
+        if (npc == NPCList.at(j))
         {
             NPCList.erase( NPCList.begin()+j );
             delete npc;
