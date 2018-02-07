@@ -1,5 +1,5 @@
-﻿Build started 2/6/2018 1:01:05 PM.
-     1>Project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" on node 2 (rebuild target(s)).
+﻿Build started 2/7/2018 9:13:58 AM.
+     1>Project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" on node 2 (build target(s)).
      1>Building with tools version "4.0".
      1>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (entry point):
        Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
@@ -11,93 +11,12 @@
        Task "Message"
          Platform=Win32
        Done executing task "Message".
-       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\' != '' and !HasTrailingSlash('F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\')).
+       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('..\' != '' and !HasTrailingSlash('..\')).
        Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
        Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('Release\' != '' and !HasTrailingSlash('Release\')).
      1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "LoginServerVS.vcxproj".
-     1>Target "_DetermineManagedStateFromCL" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Rebuild" depends on it):
+     1>Target "_DetermineManagedStateFromCL" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
      1>Done building target "_DetermineManagedStateFromCL" in project "LoginServerVS.vcxproj".
-     1>Target "_PrepareForRebuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.BuildSteps.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Rebuild" depends on it):
-     1>Done building target "_PrepareForRebuild" in project "LoginServerVS.vcxproj".
-     1>Target "BeforeRebuild" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Rebuild" depends on it):
-     1>Done building target "BeforeRebuild" in project "LoginServerVS.vcxproj".
-     1>Target "_PrepareForClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.BuildSteps.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-       Using "Delete" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "Delete"
-         Deleting file "Release\LoginServerVS.lastbuildstate".
-       Done executing task "Delete".
-     1>Done building target "_PrepareForClean" in project "LoginServerVS.vcxproj".
-     1>Target "BeforeClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-     1>Done building target "BeforeClean" in project "LoginServerVS.vcxproj".
-       Target "UnmanagedUnregistration" skipped, due to false condition; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
-                           ('$(_AssemblyTimestampBeforeCompile)' == '')) and
-                          Exists('@(_UnmanagedRegistrationCache)')) was evaluated as ((('' != '' or '' != 'true' or 'exe' != 'library') or
-                           ('' == '')) and
-                          Exists('obj\LoginServerVS.vcxproj.UnmanagedRegistration.cache')).
-     1>Target "CoreClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-       Task "Delete"
-       Done executing task "Delete".
-       Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "ReadLinesFromFile"
-       Done executing task "ReadLinesFromFile".
-       Using "FindUnderPath" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "FindUnderPath"
-         Comparison path is "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\".
-       Done executing task "FindUnderPath".
-       Task "FindUnderPath"
-         Comparison path is "Release\".
-       Done executing task "FindUnderPath".
-       Task "Delete"
-       Done executing task "Delete".
-       Using "RemoveDuplicates" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "RemoveDuplicates"
-       Done executing task "RemoveDuplicates".
-       Using "MakeDir" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "MakeDir"
-       Done executing task "MakeDir".
-       Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "WriteLinesToFile"
-       Done executing task "WriteLinesToFile".
-     1>Done building target "CoreClean" in project "LoginServerVS.vcxproj".
-     1>Target "AssignProjectConfiguration" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CleanReferencedProjects" depends on it):
-       Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "AssignProjectConfiguration"
-       Done executing task "AssignProjectConfiguration".
-     1>Done building target "AssignProjectConfiguration" in project "LoginServerVS.vcxproj".
-     1>Target "_SplitProjectReferencesByFileExistence" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CleanReferencedProjects" depends on it):
-       Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
-     1>Done building target "_SplitProjectReferencesByFileExistence" in project "LoginServerVS.vcxproj".
-     1>Target "CleanReferencedProjects" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-       Task "MSBuild" skipped, due to false condition; ('$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' != 'true' and 'true' == 'true' and '' != '').
-     1>Done building target "CleanReferencedProjects" in project "LoginServerVS.vcxproj".
-     1>Target "CleanPublishFolder" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-       Task "RemoveDir" skipped, due to false condition; ('$(PublishDir)'=='$(OutputPath)app.publish\' and Exists('$(PublishDir)')) was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\app.publish\'=='F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\app.publish\' and Exists('F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\app.publish\')).
-     1>Done building target "CleanPublishFolder" in project "LoginServerVS.vcxproj".
-     1>Target "AfterClean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-     1>Done building target "AfterClean" in project "LoginServerVS.vcxproj".
-       Target "EntityClean" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
-     1>Target "BeforeCppClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppClean.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CppClean" depends on it):
-     1>Done building target "BeforeCppClean" in project "LoginServerVS.vcxproj".
-     1>Target "CoreCppClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppClean.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CppClean" depends on it):
-       Task "MakeDir"
-       Done executing task "MakeDir".
-       Using "CppClean" task from assembly "Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-       Task "CppClean"
-       Done executing task "CppClean".
-       Task "WriteLinesToFile"
-       Done executing task "WriteLinesToFile".
-     1>Done building target "CoreCppClean" in project "LoginServerVS.vcxproj".
-     1>Target "AfterCppClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppClean.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CppClean" depends on it):
-     1>Done building target "AfterCppClean" in project "LoginServerVS.vcxproj".
-     1>Target "PGInstrumentedClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppClean.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CppClean" depends on it):
-       Task "Delete"
-       Done executing task "Delete".
-     1>Done building target "PGInstrumentedClean" in project "LoginServerVS.vcxproj".
-     1>Target "CppClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppClean.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Clean" depends on it):
-     1>Done building target "CppClean" in project "LoginServerVS.vcxproj".
-     1>Target "Clean" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Rebuild" depends on it):
-     1>Done building target "Clean" in project "LoginServerVS.vcxproj".
-       Target "_DetermineManagedStateFromCL" skipped. Previously built successfully.
      1>Target "_PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.BuildSteps.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
      1>Done building target "_PrepareForBuild" in project "LoginServerVS.vcxproj".
      1>Target "SetBuildDefaultEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
@@ -119,9 +38,15 @@
        Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '') was evaluated as ('' != '').
      1>Target "BeforeResolveReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "ResolveReferences" depends on it):
      1>Done building target "BeforeResolveReferences" in project "LoginServerVS.vcxproj".
+     1>Target "AssignProjectConfiguration" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "ResolveReferences" depends on it):
+       Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "AssignProjectConfiguration"
+       Done executing task "AssignProjectConfiguration".
+     1>Done building target "AssignProjectConfiguration" in project "LoginServerVS.vcxproj".
        Target "AssignProjectConfiguration" skipped. Previously built successfully.
-       Target "AssignProjectConfiguration" skipped. Previously built successfully.
-       Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+     1>Target "_SplitProjectReferencesByFileExistence" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "ResolveProjectReferences" depends on it):
+       Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
+     1>Done building target "_SplitProjectReferencesByFileExistence" in project "LoginServerVS.vcxproj".
        Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
      1>Target "ResolveProjectReferences" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "ResolveReferences" depends on it):
        Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '10.0' != '10.0' and '' != '').
@@ -144,6 +69,7 @@
        Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
      1>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "ResolveAssemblyReferences" depends on it):
        Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as (''!='true' and 'true' != 'true').
+       Using "MakeDir" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "MakeDir"
        Done executing task "MakeDir".
        Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and ($(TargetFrameworkVersion)=='v3.5' or $(TargetFrameworkVersion)=='v3.0' or $(TargetFrameworkVersion)=='v2.0' )) was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\'=='' and '' != 'true' and (v4.0=='v3.5' or v4.0=='v3.0' or v4.0=='v2.0' )).
@@ -151,7 +77,10 @@
        Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\'=='' and '' != 'true').
        Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\'=='' and '' != 'true').
        Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
-       Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Using "VCMessage" task from assembly "Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "VCMessage"
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+       Done executing task "VCMessage".
        Task "MakeDir"
        Done executing task "MakeDir".
      1>Done building target "PrepareForBuild" in project "LoginServerVS.vcxproj".
@@ -193,7 +122,7 @@
              {AssemblyFolders}
              {GAC}
              {RawFileName}
-             F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\
+             ..\
          AllowedAssemblyExtensions:
              .winmd
              .dll
@@ -253,13 +182,15 @@
        Target "PrepareForBuild" skipped. Previously built successfully.
        Target "PrepareForBuild" skipped. Previously built successfully.
      1>Target "InitializeBuildStatus" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
+       Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "ReadLinesFromFile"
        Done executing task "ReadLinesFromFile".
+       Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "WriteLinesToFile"
        Done executing task "WriteLinesToFile".
        Using "Touch" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "Touch"
-         Touching "Release\LoginServerVS.unsuccessfulbuild".
+         Creating "Release\LoginServerVS.unsuccessfulbuild" because "AlwaysCreate" was specified.
        Done executing task "Touch".
      1>Done building target "InitializeBuildStatus" in project "LoginServerVS.vcxproj".
        Target "AssignProjectConfiguration" skipped. Previously built successfully.
@@ -341,61 +272,33 @@
      1>Target "SelectClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "ClCompile" depends on it):
      1>Done building target "SelectClCompile" in project "LoginServerVS.vcxproj".
        Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
-       Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\..\Common\config.cpp;..\..\Common\globals.cpp;..\..\Common\log.cpp;..\..\Common\rosecrypt.cpp;..\..\Common\SocketBase.cpp;..\..\Common\SocketClient.cpp;..\..\Common\SocketServer.cpp;..\..\Login Server\extrafunction.cpp;..\..\Login Server\loginclient.cpp;..\..\Login Server\loginpackets.cpp;..\..\Login Server\loginserver.cpp;..\..\Login Server\main.cpp;..\..\Login Server\signal.cpp' != '' and 'false' == 'True').
+       Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\..\Common\config.cpp;..\..\Common\database\database.cpp;..\..\Common\globals.cpp;..\..\Common\log.cpp;..\..\Common\rosecrypt.cpp;..\..\Common\SocketBase.cpp;..\..\Common\SocketClient.cpp;..\..\Common\SocketServer.cpp;..\..\Login Server\extrafunction.cpp;..\..\Login Server\loginclient.cpp;..\..\Login Server\loginpackets.cpp;..\..\Login Server\loginserver.cpp;..\..\Login Server\main.cpp;..\..\Login Server\signal.cpp' != '' and 'false' == 'True').
      1>Target "ClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\Microsoft.Cpp.Win32.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_ClCompile" depends on it):
-       Task "Delete"
-       Done executing task "Delete".
+       Task "Delete" skipped, due to false condition; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) was evaluated as ('ProgramDatabase' != '' and 'ProgramDatabase' != 'OldStyle' and 'Release\vc100.pdb' != '' and !Exists(Release\vc100.pdb)).
        Task "CL" skipped, due to false condition; ('%(ClCompile.PrecompiledHeader)' == 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true') was evaluated as ('' == 'Create' and ''!='true').
        Using "CL" task from assembly "Microsoft.Build.CppTasks.Win32, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "CL"
-         Environment Variables passed to tool:
-           VS_UNICODE_OUTPUT=912
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Common\config.cpp ..\..\Common\globals.cpp ..\..\Common\log.cpp ..\..\Common\rosecrypt.cpp ..\..\Common\SocketBase.cpp ..\..\Common\SocketClient.cpp ..\..\Common\SocketServer.cpp "..\..\Login Server\extrafunction.cpp" "..\..\Login Server\loginclient.cpp" "..\..\Login Server\loginpackets.cpp" "..\..\Login Server\loginserver.cpp" "..\..\Login Server\main.cpp" "..\..\Login Server\signal.cpp"
-         Tracking command:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\CONFIG.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\GLOBALS.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\LOG.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\ROSECRYPT.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\SOCKETBASE.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\SOCKETCLIENT.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\SOCKETSERVER.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\EXTRAFUNCTION.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\LOGINCLIENT.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\LOGINPACKETS.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\LOGINSERVER.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\MAIN.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\SIGNAL.CPP" /b MSBuildConsole_CancelEventedec4b81a99b4ce0a4e6f91c76eb36cd  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe"  /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Common\config.cpp ..\..\Common\globals.cpp ..\..\Common\log.cpp ..\..\Common\rosecrypt.cpp ..\..\Common\SocketBase.cpp ..\..\Common\SocketClient.cpp ..\..\Common\SocketServer.cpp "..\..\Login Server\extrafunction.cpp" "..\..\Login Server\loginclient.cpp" "..\..\Login Server\loginpackets.cpp" "..\..\Login Server\loginserver.cpp" "..\..\Login Server\main.cpp" "..\..\Login Server\signal.cpp"
-         config.cpp
-     1>..\..\Common\config.cpp(28): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\Common\config.cpp(85): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(238) : see declaration of 'strdup'
-     1>..\..\Common\config.cpp(86): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(238) : see declaration of 'strdup'
-     1>..\..\Common\config.cpp(94): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(238) : see declaration of 'strdup'
-         globals.cpp
-         log.cpp
-     1>..\..\Common\log.cpp(116): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\Common\log.cpp(119): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\Common\log.cpp(122): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\Common\log.cpp(125): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\Common\log.cpp(132): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-         rosecrypt.cpp
-         SocketBase.cpp
-         SocketClient.cpp
-     1>..\..\Common\SocketClient.cpp(92): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-         SocketServer.cpp
-     1>..\..\Common\SocketServer.cpp(167): warning C4101: 'ain' : unreferenced local variable
-     1>..\..\Common\SocketServer.cpp(350): warning C4018: '>' : signed/unsigned mismatch
-     1>..\..\Common\SocketServer.cpp(422): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
-     1>..\..\Common\SocketServer.cpp(418): warning C4101: 'tmp' : unreferenced local variable
-     1>..\..\Common\SocketServer.cpp(535): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'vsprintf'
-         extrafunction.cpp
-         loginclient.cpp
-         loginpackets.cpp
-         loginserver.cpp
-         main.cpp
-         signal.cpp
+         Read Tracking Logs:
+         	Release\cl.read.1.tlog
+         Outputs for F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\CONFIG.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\DATABASE\DATABASE.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\GLOBALS.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\LOG.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\ROSECRYPT.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\SOCKETBASE.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\SOCKETCLIENT.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\COMMON\SOCKETSERVER.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\EXTRAFUNCTION.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\LOGINCLIENT.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\LOGINPACKETS.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\LOGINSERVER.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\MAIN.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\LOGIN SERVER\SIGNAL.CPP:
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\CONFIG.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\DATABASE.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\GLOBALS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOG.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\ROSECRYPT.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETBASE.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETCLIENT.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETSERVER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\EXTRAFUNCTION.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINCLIENT.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINPACKETS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINSERVER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\MAIN.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SIGNAL.OBJ
+         All outputs are up-to-date.
        Done executing task "CL".
      1>Done building target "ClCompile" in project "LoginServerVS.vcxproj".
-       Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\..\Common\config.cpp;..\..\Common\globals.cpp;..\..\Common\log.cpp;..\..\Common\rosecrypt.cpp;..\..\Common\SocketBase.cpp;..\..\Common\SocketClient.cpp;..\..\Common\SocketServer.cpp;..\..\Login Server\extrafunction.cpp;..\..\Login Server\loginclient.cpp;..\..\Login Server\loginpackets.cpp;..\..\Login Server\loginserver.cpp;..\..\Login Server\main.cpp;..\..\Login Server\signal.cpp' != '' and 'false' == 'True').
+       Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\..\Common\config.cpp;..\..\Common\database\database.cpp;..\..\Common\globals.cpp;..\..\Common\log.cpp;..\..\Common\rosecrypt.cpp;..\..\Common\SocketBase.cpp;..\..\Common\SocketClient.cpp;..\..\Common\SocketServer.cpp;..\..\Login Server\extrafunction.cpp;..\..\Login Server\loginclient.cpp;..\..\Login Server\loginpackets.cpp;..\..\Login Server\loginserver.cpp;..\..\Login Server\main.cpp;..\..\Login Server\signal.cpp' != '' and 'false' == 'True').
      1>Target "AfterClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_ClCompile" depends on it):
      1>Done building target "AfterClCompile" in project "LoginServerVS.vcxproj".
      1>Target "_ClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildCompile" depends on it):
@@ -485,7 +388,7 @@
        Done executing task "MakeDir".
      1>Done building target "MakeDirsForLink" in project "LoginServerVS.vcxproj".
      1>Target "DoLinkOutputFilesMatch" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_Link" depends on it):
-       Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.exe' != 'F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.exe').
+       Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS.exe' != 'F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS.exe').
        Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('.exe' != '.exe').
        Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('LoginServerVS' != 'LoginServerVS').
      1>Done building target "DoLinkOutputFilesMatch" in project "LoginServerVS.vcxproj".
@@ -497,8 +400,9 @@
        Using "Link" task from assembly "Microsoft.Build.CppTasks.Win32, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "Link"
          Environment Variables passed to tool:
-           VS_UNICODE_OUTPUT=1816
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\LoginServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.lib" /MACHINE:X86 Release\config.obj
+           VS_UNICODE_OUTPUT=1288
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\LoginServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\LoginServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\LoginServerVS.lib" /MACHINE:X86 Release\config.obj
+         Release\database.obj
          Release\globals.obj
          Release\log.obj
          Release\rosecrypt.obj
@@ -512,7 +416,8 @@
          Release\main.obj
          Release\signal.obj
          Tracking command:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /a /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\CONFIG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\EXTRAFUNCTION.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\GLOBALS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINPACKETS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINSERVER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\MAIN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\ROSECRYPT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SIGNAL.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETBASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETSERVER.OBJ" /b MSBuildConsole_CancelEventdb317944d382431f885d648b85d898e8  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe"  /ERRORREPORT:PROMPT /OUT:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\LoginServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.lib" /MACHINE:X86 Release\config.obj
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /a /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\CONFIG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\DATABASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\EXTRAFUNCTION.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\GLOBALS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINPACKETS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINSERVER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\MAIN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\ROSECRYPT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SIGNAL.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETBASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\SOCKETSERVER.OBJ" /b MSBuildConsole_CancelEvent00e4d7273ec1456284da93b687a1feec  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe"  /ERRORREPORT:PROMPT /OUT:"..\LoginServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\LoginServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\LoginServerVS.lib" /MACHINE:X86 Release\config.obj
+         Release\database.obj
          Release\globals.obj
          Release\log.obj
          Release\rosecrypt.obj
@@ -525,20 +430,150 @@
          Release\loginserver.obj
          Release\main.obj
          Release\signal.obj
-            Creating library F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.lib and object F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.exp
-     1>loginpackets.obj : error LNK2001: unresolved external symbol "public: void __thiscall CDatabase::QFree(void)" (?QFree@CDatabase@@QAEXXZ)
-     1>loginpackets.obj : error LNK2001: unresolved external symbol "public: struct st_mysql_res * __cdecl CDatabase::QStore(char *,...)" (?QStore@CDatabase@@QAAPAUst_mysql_res@@PADZZ)
-     1>loginpackets.obj : error LNK2001: unresolved external symbol "public: bool __cdecl CDatabase::QExecute(char *,...)" (?QExecute@CDatabase@@QAA_NPADZZ)
-     1>loginserver.obj : error LNK2001: unresolved external symbol "public: bool __thiscall CDatabase::Ping(void)" (?Ping@CDatabase@@QAE_NXZ)
-     1>main.obj : error LNK2001: unresolved external symbol "public: void __thiscall CDatabase::Disconnect(void)" (?Disconnect@CDatabase@@QAEXXZ)
-     1>main.obj : error LNK2001: unresolved external symbol "public: int __thiscall CDatabase::Connect(void)" (?Connect@CDatabase@@QAEHXZ)
-     1>main.obj : error LNK2001: unresolved external symbol "public: __thiscall CDatabase::CDatabase(char *,char *,char *,char *,unsigned int,struct st_mysql *)" (??0CDatabase@@QAE@PAD000IPAUst_mysql@@@Z)
-     1>F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release\LoginServerVS.exe : fatal error LNK1120: 7 unresolved externals
-         The command exited with code 1120.
-       Done executing task "Link" -- FAILED.
-     1>Done building target "Link" in project "LoginServerVS.vcxproj" -- FAILED.
-     1>Done Building Project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (rebuild target(s)) -- FAILED.
+            Creating library ..\LoginServerVS.lib and object ..\LoginServerVS.exp
+         Generating code
+     1>f:\triggersoft\osirose for modded hrose\login server\loginpackets.cpp(143): warning C4715: 'CLoginServer::pakUserLogin' : not all control paths return a value
+     1>f:\triggersoft\osirose for modded hrose\login server\loginserver.cpp(52): warning C4715: 'CLoginServer::CreateClientSocket' : not all control paths return a value
+         Finished generating code
+       Done executing task "Link".
+       Task "Message"
+         LoginServerVS.vcxproj -> F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\..\LoginServerVS.exe
+       Done executing task "Message".
+     1>Done building target "Link" in project "LoginServerVS.vcxproj".
+     1>Target "_DetermineManagedStateForLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_Link" depends on it):
+     1>Done building target "_DetermineManagedStateForLink" in project "LoginServerVS.vcxproj".
+       Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
+       Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false') was evaluated as ('false'!='' and 'false'!='false').
+       Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
+     1>Target "ComputeLinkImportLibraryOutputsForClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_Link" depends on it):
+       Task "WriteLinesToFile"
+       Done executing task "WriteLinesToFile".
+     1>Done building target "ComputeLinkImportLibraryOutputsForClean" in project "LoginServerVS.vcxproj".
+     1>Target "AfterLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_Link" depends on it):
+     1>Done building target "AfterLink" in project "LoginServerVS.vcxproj".
+     1>Target "_Link" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_Link" in project "LoginServerVS.vcxproj".
+     1>Target "_ALink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_ALink" in project "LoginServerVS.vcxproj".
+       Target "ComputeManifestInputsTargets" skipped. Previously built successfully.
+     1>Target "MakeDirsForManifest" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Manifest" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForManifest" in project "LoginServerVS.vcxproj".
+     1>Target "Manifest" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_Manifest" depends on it):
+       Task "Delete" skipped, due to false condition; (('$(BuildType)' != 'Build' or '$(ForceRebuild)' == 'true') and '$(EmbedManifestby)'=='LINK') was evaluated as (('Build' != 'Build' or '' == 'true') and 'MT'=='LINK').
+       Using "Mt" task from assembly "Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "Mt"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\LoginServerVS.exe;#1" /manifest Release\LoginServerVS.exe.intermediate.manifest
+         Tracking command:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\LOGINSERVERVS\RELEASE\LOGINSERVERVS.EXE.INTERMEDIATE.MANIFEST" /b MSBuildConsole_CancelEvent61ec3a243cad4e21ac37b36bf0d5d291  /c "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe"  /nologo /verbose /outputresource:"..\LoginServerVS.exe;#1" /manifest Release\LoginServerVS.exe.intermediate.manifest
+       Done executing task "Mt".
+       Task "RC" skipped, due to false condition; ('$(EmbedManifestby)'=='LINK') was evaluated as ('MT'=='LINK').
+     1>Done building target "Manifest" in project "LoginServerVS.vcxproj".
+       Target "ComputeManifestGeneratedLinkerInputs" skipped. Previously built successfully.
+     1>Target "_Manifest" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_Manifest" in project "LoginServerVS.vcxproj".
+     1>Target "RegisterOutput" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true').
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true').
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'!='true').
+       Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'=='true').
+       Task "VCMessage" skipped, due to false condition; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') was evaluated as ('' != '' and '' != '0').
+     1>Done building target "RegisterOutput" in project "LoginServerVS.vcxproj".
+     1>Target "ComputeCLCompileGeneratedXDCFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_XdcMake" depends on it):
+     1>Done building target "ComputeCLCompileGeneratedXDCFiles" in project "LoginServerVS.vcxproj".
+       Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+       Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '') was evaluated as ('' != '').
+       Target "PrepareForBuild" skipped. Previously built successfully.
+       Target "ResolveReferences" skipped. Previously built successfully.
+     1>Target "ResolvedXDCMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_XdcMake" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') was evaluated as ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
+     1>Done building target "ResolvedXDCMake" in project "LoginServerVS.vcxproj".
+     1>Target "MakeDirsForXdcMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_XdcMake" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForXdcMake" in project "LoginServerVS.vcxproj".
+       Target "XdcMake" skipped, due to false condition; ('@(XdcMake)' != '') was evaluated as ('' != '').
+     1>Target "_XdcMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_XdcMake" in project "LoginServerVS.vcxproj".
+     1>Target "ComputeCLCompileGeneratedSbrFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_BscMake" depends on it):
+     1>Done building target "ComputeCLCompileGeneratedSbrFiles" in project "LoginServerVS.vcxproj".
+     1>Target "MakeDirsForBscMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_BscMake" depends on it):
+       Task "MakeDir"
+       Done executing task "MakeDir".
+     1>Done building target "MakeDirsForBscMake" in project "LoginServerVS.vcxproj".
+       Target "BscMake" skipped, due to false condition; ('@(BscMake)' != '') was evaluated as ('' != '').
+       Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
+     1>Target "_BscMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_BscMake" in project "LoginServerVS.vcxproj".
+     1>Target "_GenerateSatelliteAssemblyInputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
+       Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+       Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+     1>Done building target "_GenerateSatelliteAssemblyInputs" in project "LoginServerVS.vcxproj".
+       Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
+       Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
+     1>Target "CreateSatelliteAssemblies" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "CreateSatelliteAssemblies" in project "LoginServerVS.vcxproj".
+     1>Target "_Appverifier" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_Appverifier" in project "LoginServerVS.vcxproj".
+     1>Target "_Deploy" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+     1>Done building target "_Deploy" in project "LoginServerVS.vcxproj".
+       Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
+       Target "_CopyFilesMarkedCopyLocal" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '').
+       Target "AssignTargetPaths" skipped. Previously built successfully.
+       Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+     1>Target "GetCopyToOutputDirectoryXamlAppDefs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+     1>Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "LoginServerVS.vcxproj".
+     1>Target "GetCopyToOutputDirectoryItems" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+       Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
+       Task "AssignTargetPath"
+       Done executing task "AssignTargetPath".
+     1>Done building target "GetCopyToOutputDirectoryItems" in project "LoginServerVS.vcxproj".
+       Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
+       Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) was evaluated as ( '' != '' ).
+     1>Target "_CopySourceItemsToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+     1>Done building target "_CopySourceItemsToOutputDirectory" in project "LoginServerVS.vcxproj".
+       Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
+       Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
+     1>Target "_CheckForCompileOutputs" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+     1>Done building target "_CheckForCompileOutputs" in project "LoginServerVS.vcxproj".
+       Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Auto' == 'On' or (''!='' and 'Auto' == 'Auto')).
+     1>Target "CopyFilesToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+       Task "Copy" skipped, due to false condition; ('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)' != 'true') was evaluated as ('true' == 'true' and 'true' != 'true').
+       Task "Message" skipped, due to false condition; ('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)'!='true') was evaluated as ('true' == 'true' and 'true'!='true').
+       Task "Copy" skipped, due to false condition; ('@(AddModules)' != '') was evaluated as ('' != '').
+       Task "Copy" skipped, due to false condition; ('$(_SGenDllCreated)'=='true') was evaluated as ('false'=='true').
+       Task "Copy" skipped, due to false condition; ('$(_DebugSymbolsProduced)'=='true' and '$(SkipCopyingSymbolsToOutputDirectory)' != 'true' and '$(CopyOutputSymbolsToOutputDirectory)'=='true') was evaluated as ('false'=='true' and '' != 'true' and 'true'=='true').
+       Task "Copy" skipped, due to false condition; ('$(_DocumentationFileProduced)'=='true') was evaluated as ('false'=='true').
+       Task "Copy" skipped, due to false condition; ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '') was evaluated as ('' != '').
+       Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
+       Task "Copy" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') was evaluated as ('' != 'true' and '' != '').
+       Task "Message" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') was evaluated as ('' != 'true' and '' != '').
+     1>Done building target "CopyFilesToOutputDirectory" in project "LoginServerVS.vcxproj".
+       Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
+     1>Target "PostBuildEvent" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "BuildLink" depends on it):
+       Task "Message" skipped, due to false condition; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+       Task "Exec" skipped, due to false condition; ('%(PostBuildEvent.Command)' != '') was evaluated as ('' != '').
+     1>Done building target "PostBuildEvent" in project "LoginServerVS.vcxproj".
+     1>Target "BuildLink" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
+     1>Done building target "BuildLink" in project "LoginServerVS.vcxproj".
+     1>Target "AfterBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.BuildSteps.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
+     1>Done building target "AfterBuild" in project "LoginServerVS.vcxproj".
+     1>Target "FinalizeBuildStatus" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (target "Build" depends on it):
+       Using "Delete" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "Delete"
+         Deleting file "Release\LoginServerVS.unsuccessfulbuild".
+       Done executing task "Delete".
+       Task "Touch"
+         Touching "Release\LoginServerVS.lastbuildstate".
+       Done executing task "Touch".
+     1>Done building target "FinalizeBuildStatus" in project "LoginServerVS.vcxproj".
+     1>Target "Build" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.BuildSteps.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (entry point):
+     1>Done building target "Build" in project "LoginServerVS.vcxproj".
+     1>Done Building Project "F:\Triggersoft\osirose for modded hrose\Binary\LoginServerVS\LoginServerVS.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:06.78
+Time Elapsed 00:00:03.40
