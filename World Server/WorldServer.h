@@ -324,7 +324,8 @@ public:
     bool LoadSkillData( );
     bool LoadMonsters( );
     bool LoadNPCData( );
-    bool LoadUpgrade( );
+    //bool LoadUpgrade( );	//PY: removed. Using STB now
+	bool LoadRefineChances( );	//PY: load refine chances
     bool LoadNPCs( );
     bool LoadSTB( );
     bool CleanConnectedList( );
@@ -372,6 +373,10 @@ public:
 	//CExtraStats             StatLookup[301];        //PY: Item Stats
     CExtraStats             StatLookup[MAX_EXTRA_STATS];        //PY: Item Stats
 
+	CGrade                 **GradeList;
+	CUPGrade				UpGradeList[20];
+    int                     maxGrades;              //Nb grades (refines)
+
 
     CItemStas               StatsList[500];
     UINT                    upgrade[10];
@@ -393,6 +398,9 @@ public:
     CSTBData                STB_ZONE;               // Zone data
     CSTBData                STB_PRODUCT;            // Crafting data
     CSTBData                STB_SELL;               // npc sell index
+
+	CSTBData				ListUpGrade;			// PY: stores the upgrade chances
+
     vector<CQuestTrigger*>  TriggerList;
     fpQuestCond qstCondFunc[31];
     fpQuestRewd qstRewdFunc[29];

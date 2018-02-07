@@ -333,15 +333,21 @@ bool CWorldServer::pakDoIdentify( CPlayer *thisclient, CPacket *P )
     DB->QFree( );
     if (!thisclient->loaddata( )) return false;
     Log( MSG_INFO, "User '%s'(#%i) logged in with character '%s'", thisclient->Session->username, thisclient->Session->userid, thisclient->CharInfo->charname);
-    BEGINPACKET( pak, 0x070c );
+    Log( MSG_INFO, "sending 0x7de");
+	BEGINPACKET( pak, 0x070c );
     ADDBYTE    ( pak, 0 );
     ADDDWORD   ( pak, 0x87654321 );
     ADDDWORD   ( pak, 0x00000000 );
     thisclient->client->SendPacket( &pak );
+
+	Log( MSG_INFO, "running pakPlayer");
     pakPlayer(thisclient);
+	Log( MSG_INFO, "running pakInventory");
     pakInventory(thisclient);
+	Log( MSG_INFO, "running pakQuestdata");
     pakQuestData(thisclient);
 
+	Log( MSG_INFO, "sending 0x7de");
     RESETPACKET( pak, 0x7de );
     ADDWORD ( pak, 0x1001 ); // 0x1001 to 0x1013 (game plan?)
     ADDDWORD ( pak, 2 ); // options (plan time?) [2 = unlimited]

@@ -1,4 +1,4 @@
-﻿Build started 2/6/2018 3:16:20 PM.
+﻿Build started 2/7/2018 10:44:36 AM.
      1>Project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS.vcxproj" on node 2 (build target(s)).
      1>Building with tools version "4.0".
      1>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS.vcxproj" (entry point):
@@ -11,7 +11,7 @@
        Task "Message"
          Platform=Win32
        Done executing task "Message".
-       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\' != '' and !HasTrailingSlash('F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\')).
+       Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('..\' != '' and !HasTrailingSlash('..\')).
        Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
        Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('Release\' != '' and !HasTrailingSlash('Release\')).
      1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "WorldServerVS.vcxproj".
@@ -77,7 +77,10 @@
        Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\'=='' and '' != 'true').
        Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\'=='' and '' != 'true').
        Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
-       Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+       Using "VCMessage" task from assembly "Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Task "VCMessage"
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+       Done executing task "VCMessage".
        Task "MakeDir"
        Done executing task "MakeDir".
      1>Done building target "PrepareForBuild" in project "WorldServerVS.vcxproj".
@@ -119,7 +122,7 @@
              {AssemblyFolders}
              {GAC}
              {RawFileName}
-             F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\
+             ..\
          AllowedAssemblyExtensions:
              .winmd
              .dll
@@ -187,7 +190,7 @@
        Done executing task "WriteLinesToFile".
        Using "Touch" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "Touch"
-         Touching "Release\WorldServerVS.unsuccessfulbuild".
+         Creating "Release\WorldServerVS.unsuccessfulbuild" because "AlwaysCreate" was specified.
        Done executing task "Touch".
      1>Done building target "InitializeBuildStatus" in project "WorldServerVS.vcxproj".
        Target "AssignProjectConfiguration" skipped. Previously built successfully.
@@ -325,50 +328,68 @@
          	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ
          	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPROCESS.OBJ
          	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVER.OBJ
-         ..\..\World Server\aip\AiActions.cpp will be compiled as F:\Triggersoft\osirose for modded hrose\World Server\aip\AiActions.cpp was modified at 2/6/2018 3:16:20 PM.
-         ..\..\World Server\startup.cpp will be compiled as F:\Triggersoft\osirose for modded hrose\World Server\startup.cpp was modified at 2/6/2018 3:16:20 PM.
+         ..\..\World Server\worldpackets.cpp will be compiled as F:\Triggersoft\osirose for modded hrose\World Server\worldpackets.cpp was modified at 2/7/2018 10:44:34 AM.
          Write Tracking Logs:
          	Release\cl.write.1.tlog
          Environment Variables passed to tool:
-           VS_UNICODE_OUTPUT=1460
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\World Server\aip\AiActions.cpp" "..\..\World Server\startup.cpp"
+           VS_UNICODE_OUTPUT=620
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\World Server\worldpackets.cpp"
          Tracking command:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\WORLD SERVER\AIP\AIACTIONS.CPP|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\WORLD SERVER\STARTUP.CPP" /b MSBuildConsole_CancelEvent7baa196c68724e3d9752fb2b9a9854c4  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe"  /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\World Server\aip\AiActions.cpp" "..\..\World Server\startup.cpp"
-         AiActions.cpp
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\WORLD SERVER\WORLDPACKETS.CPP" /b MSBuildConsole_CancelEvent3cb19e0b1abe43ae8e467d9ee6556b16  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe"  /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\World Server\worldpackets.cpp"
+         worldpackets.cpp
      1>f:\triggersoft\osirose for modded hrose\world server\quest/CIntStb.hpp(16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\World Server\aip\AiActions.cpp(425): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\World Server\aip\AiActions.cpp(426): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\World Server\aip\AiActions.cpp(580): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\World Server\aip\AiActions.cpp(586): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\World Server\aip\AiActions.cpp(594): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-         startup.cpp
-     1>f:\triggersoft\osirose for modded hrose\world server\quest/CIntStb.hpp(16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
-     1>..\..\World Server\startup.cpp(75): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\World Server\startup.cpp(86): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>..\..\World Server\startup.cpp(133): warning C4101: 'tmp' : unreferenced local variable
-     1>..\..\World Server\startup.cpp(303): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\World Server\startup.cpp(304): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>..\..\World Server\startup.cpp(321): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(325): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(333): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(349): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
-     1>..\..\World Server\startup.cpp(367): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(409): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(419): warning C4018: '<' : signed/unsigned mismatch
-     1>..\..\World Server\startup.cpp(421): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(428): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(197) : see declaration of 'strtok'
-     1>..\..\World Server\startup.cpp(796): warning C4244: 'argument' : conversion from 'UINT' to 'float', possible loss of data
-     1>..\..\World Server\startup.cpp(810): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>..\..\World Server\worldpackets.cpp(74): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(75): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(252): warning C4244: '-=' : conversion from 'time_t' to 'long', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(329): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : see declaration of 'strncpy'
+     1>..\..\World Server\worldpackets.cpp(330): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : see declaration of 'strncpy'
+     1>..\..\World Server\worldpackets.cpp(384): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(421): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(422): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(704): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(739): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(1052): warning C4244: '=' : conversion from 'WORD' to 'unsigned char', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1055): warning C4244: '=' : conversion from 'WORD' to 'unsigned char', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1374): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : see declaration of 'strncpy'
+     1>..\..\World Server\worldpackets.cpp(1530): warning C4244: '=' : conversion from 'UINT' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1591): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1601): warning C4244: 'initializing' : conversion from 'UINT' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1604): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>..\..\World Server\worldpackets.cpp(1638): warning C4244: '=' : conversion from 'UINT' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1641): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>..\..\World Server\worldpackets.cpp(1687): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>..\..\World Server\worldpackets.cpp(1751): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1758): warning C4244: 'initializing' : conversion from 'UINT' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1764): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>..\..\World Server\worldpackets.cpp(1792): warning C4244: '=' : conversion from 'UINT' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1797): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>..\..\World Server\worldpackets.cpp(1857): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(1832): warning C4101: 'thispoint' : unreferenced local variable
+     1>..\..\World Server\worldpackets.cpp(2054): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(2164): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(2165): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(2253): warning C4101: 'thispoint' : unreferenced local variable
+     1>..\..\World Server\worldpackets.cpp(2337): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(2346): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(2361): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(2930): warning C4244: '-=' : conversion from 'QWORD' to 'long', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(2931): warning C4244: '+=' : conversion from 'QWORD' to 'long', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(2943): warning C4244: '+=' : conversion from 'QWORD' to 'long', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(2944): warning C4244: '-=' : conversion from 'QWORD' to 'long', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(2972): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : see declaration of 'strncpy'
+     1>..\..\World Server\worldpackets.cpp(3082): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(3092): warning C4018: '<=' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(3193): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(3198): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(3205): warning C4018: '<=' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(3585): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>..\..\World Server\worldpackets.cpp(3592): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\World Server\worldpackets.cpp(3851): warning C4244: '=' : conversion from 'long' to 'WORD', possible loss of data
        Done executing task "CL".
      1>Done building target "ClCompile" in project "WorldServerVS.vcxproj".
        Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('..\..\Common\config.cpp;..\..\Common\database\database.cpp;..\..\Common\globals.cpp;..\..\Common\log.cpp;..\..\Common\rosecrypt.cpp;..\..\Common\SocketBase.cpp;..\..\Common\SocketClient.cpp;..\..\Common\SocketServer.cpp;..\..\World Server\aip\AiActions.cpp;..\..\World Server\aip\AiConditions.cpp;..\..\World Server\aip\Aip.cpp;..\..\World Server\battle.cpp;..\..\World Server\Buff.cpp;..\..\World Server\character.cpp;..\..\World Server\charevent.cpp;..\..\World Server\charfunctions.cpp;..\..\World Server\charstats.cpp;..\..\World Server\clan.cpp;..\..\World Server\extrafunctions.cpp;..\..\World Server\gmcmds.cpp;..\..\World Server\itemdata.cpp;..\..\World Server\main.cpp;..\..\World Server\MainProcess.cpp;..\..\World Server\mapfunctions.cpp;..\..\World Server\Monster.cpp;..\..\World Server\MonsterEvents.cpp;..\..\World Server\monsterfunctions.cpp;..\..\World Server\MonsterStats.cpp;..\..\World Server\Party.cpp;..\..\World Server\partyfunctions.cpp;..\..\World Server\player.cpp;..\..\World Server\playerdata.cpp;..\..\World Server\playerfunctions.cpp;..\..\World Server\playerquest.cpp;..\..\World Server\playerstats.cpp;..\..\World Server\quest\QuestActions.cpp;..\..\World Server\quest\QuestConditions.cpp;..\..\World Server\quest\Quests.cpp;..\..\World Server\ServerFunctions.cpp;..\..\World Server\startup.cpp;..\..\World Server\stbhandler.cpp;..\..\World Server\strhashing.cpp;..\..\World Server\worldmap.cpp;..\..\World Server\WorldMonster.cpp;..\..\World Server\worldpackets.cpp;..\..\World Server\Worldprocess.cpp;..\..\World Server\worldserver.cpp' != '' and 'false' == 'True').
@@ -461,7 +482,7 @@
        Done executing task "MakeDir".
      1>Done building target "MakeDirsForLink" in project "WorldServerVS.vcxproj".
      1>Target "DoLinkOutputFilesMatch" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS.vcxproj" (target "_Link" depends on it):
-       Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe' != 'F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe').
+       Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS.exe' != 'F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS.exe').
        Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('.exe' != '.exe').
        Task "VCMessage" skipped, due to false condition; ('%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('WorldServerVS' != 'WorldServerVS').
      1>Done building target "DoLinkOutputFilesMatch" in project "WorldServerVS.vcxproj".
@@ -472,9 +493,90 @@
      1>Target "Link" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\Microsoft.Cpp.Win32.Targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS.vcxproj" (target "_Link" depends on it):
        Using "Link" task from assembly "Microsoft.Build.CppTasks.Win32, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "Link"
+         Write Tracking Logs:
+         	Release\link.write.1.tlog
+         Read Tracking Logs:
+         	Release\link.read.1.tlog
+         Outputs for F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AICONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BATTLE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BUFF.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARACTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHAREVENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CLAN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CONFIG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\DATABASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\EXTRAFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GLOBALS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GMCMDS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ITEMDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\LOG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAIN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAINPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAPFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTEREVENTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTY.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTYFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERQUEST.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTCONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ROSECRYPT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SERVERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETBASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETSERVER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STARTUP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STBHANDLER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STRHASHING.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMAP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVER.OBJ:
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS.EXE
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVERVS.EXE.INTERMEDIATE.MANIFEST
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS.PDB
+         Inputs for F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AICONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BATTLE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BUFF.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARACTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHAREVENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CLAN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CONFIG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\DATABASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\EXTRAFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GLOBALS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GMCMDS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ITEMDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\LOG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAIN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAINPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAPFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTEREVENTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTY.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTYFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERQUEST.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTCONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ROSECRYPT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SERVERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETBASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETSERVER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STARTUP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STBHANDLER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STRHASHING.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMAP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVER.OBJ:
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\INCLUDE\LIB\X86\PTHREADVC2.LIB
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\INCLUDE\MYSQL\LIB\LIBMYSQL.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\WS2_32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\KERNEL32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\USER32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\GDI32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\WINSPOOL.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\COMDLG32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\ADVAPI32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\SHELL32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\OLE32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\OLEAUT32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\UUID.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\ODBC32.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT SDKS\WINDOWS\V7.0A\LIB\ODBCCP32.LIB
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CONFIG.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\DATABASE.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GLOBALS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\LOG.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ROSECRYPT.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETBASE.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETCLIENT.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETSERVER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIACTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AICONDITIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIP.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BATTLE.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BUFF.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARACTER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHAREVENT.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARSTATS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CLAN.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\EXTRAFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GMCMDS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ITEMDATA.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAIN.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAINPROCESS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAPFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTEREVENTS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERSTATS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTY.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTYFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERDATA.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERQUEST.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERSTATS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTACTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTCONDITIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SERVERFUNCTIONS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STARTUP.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STBHANDLER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STRHASHING.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMAP.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMONSTER.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPROCESS.OBJ
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVER.OBJ
+         	C:\WINDOWS\GLOBALIZATION\SORTING\SORTDEFAULT.NLS
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 10.0\VC\BIN\C2.DLL
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 10.0\VC\LIB\MSVCPRT.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 10.0\VC\LIB\MSVCRT.LIB
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 10.0\VC\LIB\OLDNAMES.LIB
+         	C:\WINDOWS\SYSTEM32\TZRES.DLL
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 10.0\VC\BIN\1033\LINKUI.DLL
+         	F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS.EXP
+         	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 10.0\VC\BIN\1033\CLUI.DLL
+         Source compilation required: input F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ is newer than output F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVERVS.EXE.INTERMEDIATE.MANIFEST.
          Environment Variables passed to tool:
-           VS_UNICODE_OUTPUT=1460
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\WorldServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.lib" /MACHINE:X86 Release\config.obj
+           VS_UNICODE_OUTPUT=1164
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\WorldServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\WorldServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\WorldServerVS.lib" /MACHINE:X86 Release\config.obj
          Release\database.obj
          Release\globals.obj
          Release\log.obj
@@ -522,7 +624,7 @@
          Release\Worldprocess.obj
          Release\worldserver.obj
          Tracking command:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /a /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AICONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BATTLE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BUFF.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARACTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHAREVENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CLAN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CONFIG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\DATABASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\EXTRAFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GLOBALS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GMCMDS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ITEMDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\LOG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAIN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAINPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAPFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTEREVENTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTY.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTYFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERQUEST.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTCONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ROSECRYPT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SERVERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETBASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETSERVER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STARTUP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STBHANDLER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STRHASHING.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMAP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVER.OBJ" /b MSBuildConsole_CancelEventf004dfc0731a445f9b1ee33eb640cadf  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe"  /ERRORREPORT:PROMPT /OUT:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\WorldServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.lib" /MACHINE:X86 Release\config.obj
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /a /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AICONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\AIP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BATTLE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\BUFF.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARACTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHAREVENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CHARSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CLAN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\CONFIG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\DATABASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\EXTRAFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GLOBALS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\GMCMDS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ITEMDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\LOG.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAIN.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAINPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MAPFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTEREVENTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\MONSTERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTY.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PARTYFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERDATA.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERQUEST.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\PLAYERSTATS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTACTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTCONDITIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\QUESTS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\ROSECRYPT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SERVERFUNCTIONS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETBASE.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETCLIENT.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\SOCKETSERVER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STARTUP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STBHANDLER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\STRHASHING.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMAP.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDMONSTER.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPACKETS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDPROCESS.OBJ|F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVER.OBJ" /b MSBuildConsole_CancelEventd92cd1ef5a844a82b1cb489a92317a65  /c "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe"  /ERRORREPORT:PROMPT /OUT:"..\WorldServerVS.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\include\mysql\lib pthreadVC2.lib libmySQL.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\WorldServerVS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\WorldServerVS.lib" /MACHINE:X86 Release\config.obj
          Release\database.obj
          Release\globals.obj
          Release\log.obj
@@ -569,7 +671,7 @@
          Release\worldpackets.obj
          Release\Worldprocess.obj
          Release\worldserver.obj
-            Creating library F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.lib and object F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exp
+            Creating library ..\WorldServerVS.lib and object ..\WorldServerVS.exp
          Generating code
      1>f:\triggersoft\osirose for modded hrose\world server\extrafunctions.cpp(1067): warning C4715: 'CWorldServer::GetFairyRange' : not all control paths return a value
      1>f:\triggersoft\osirose for modded hrose\world server\charfunctions.cpp(170): warning C4715: 'CCharacter::IsOnBattle' : not all control paths return a value
@@ -579,7 +681,7 @@
          Finished generating code
        Done executing task "Link".
        Task "Message"
-         WorldServerVS.vcxproj -> F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe
+         WorldServerVS.vcxproj -> F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\..\WorldServerVS.exe
        Done executing task "Message".
      1>Done building target "Link" in project "WorldServerVS.vcxproj".
      1>Target "_DetermineManagedStateForLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets" from project "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\WorldServerVS.vcxproj" (target "_Link" depends on it):
@@ -606,9 +708,9 @@
        Task "Delete" skipped, due to false condition; (('$(BuildType)' != 'Build' or '$(ForceRebuild)' == 'true') and '$(EmbedManifestby)'=='LINK') was evaluated as (('Build' != 'Build' or '' == 'true') and 'MT'=='LINK').
        Using "Mt" task from assembly "Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
        Task "Mt"
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe;#1" /manifest Release\WorldServerVS.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\WorldServerVS.exe;#1" /manifest Release\WorldServerVS.exe.intermediate.manifest
          Tracking command:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVERVS.EXE.INTERMEDIATE.MANIFEST" /b MSBuildConsole_CancelEvent2962f274fa934712bd357382a5453c0d  /c "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe"  /nologo /verbose /outputresource:"F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release\WorldServerVS.exe;#1" /manifest Release\WorldServerVS.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i "F:\Triggersoft\osirose for modded hrose\Binary\WorldServerVS\Release" /r "F:\TRIGGERSOFT\OSIROSE FOR MODDED HROSE\BINARY\WORLDSERVERVS\RELEASE\WORLDSERVERVS.EXE.INTERMEDIATE.MANIFEST" /b MSBuildConsole_CancelEvent373b30c37ff14b47b05871cdca56d2d0  /c "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe"  /nologo /verbose /outputresource:"..\WorldServerVS.exe;#1" /manifest Release\WorldServerVS.exe.intermediate.manifest
        Done executing task "Mt".
        Task "RC" skipped, due to false condition; ('$(EmbedManifestby)'=='LINK') was evaluated as ('MT'=='LINK').
      1>Done building target "Manifest" in project "WorldServerVS.vcxproj".
@@ -718,4 +820,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.84
+Time Elapsed 00:00:12.58

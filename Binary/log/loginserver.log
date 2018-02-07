@@ -41,3 +41,13 @@ Connecting to MySQL
 MySQL Ping Timeout: 28740 seconds
 Connected to MySQL server
 Server started on port 29000 and is listening.
+Connecting to MySQL
+MySQL Ping Timeout: 28740 seconds
+Connected to MySQL server
+Server started on port 29000 and is listening.
+User connected from 127.0.0.1
+User disconnected
+User connected from 127.0.0.1
+User disconnected
+User connected from 127.0.0.1
+User disconnected

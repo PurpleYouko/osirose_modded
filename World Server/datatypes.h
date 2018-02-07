@@ -929,6 +929,29 @@ struct CSkills {
     UINT svalue1;
 };
 
+//LMA: Grade structure.
+struct CGrade 
+{
+    UINT atk_percent;
+    UINT atk_addbonus;
+    UINT acc_percent;
+    UINT acc_addbonus;
+    UINT def_percent;
+    UINT def_addbonus;
+    UINT mdef_percent;
+    UINT mdef_addbonus;
+    UINT dodge_percent;
+    UINT dodge_addbonus;
+};
+
+struct CUPGrade
+{
+	UINT BindLevel;
+	UINT BindSuccess;
+	UINT TaliLevel;
+	UINT TaliSuccess;
+};
+
 // -----------------------------------------------------------------------------------------
 // Status Object
 // -----------------------------------------------------------------------------------------

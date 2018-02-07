@@ -498,7 +498,8 @@ bool CWorldServer::OnServerReady( )
 #endif
     LoadNPCs( );
     LoadMonsters( );
-    LoadUpgrade( );
+    //LoadUpgrade( );	//removed. doing it from STB now. PY
+	LoadRefineChances( );			//PY: load refine success rates
     LoadQuestData( );
     LoadAipData();
     //LoadZones();

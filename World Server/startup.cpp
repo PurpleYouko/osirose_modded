@@ -44,6 +44,9 @@ bool CWorldServer::LoadSTBData()
 	STBStoreData("3DData\\STB\\LIST_SELL.STB", &STB_SELL);
 	STBStoreData("3DData\\STB\\LIST_ZONE.STB", &STB_ZONE);
 	STBStoreData("3DData\\STB\\ITEM_DROP.STB", &STB_DROP);
+
+	//this is going to replace loading it in from the csv. Might be a can of worms though
+	STBStoreData("3DData\\STB\\LIST_UPGRADE.STB", &ListUpGrade);		//PY: Used to store the refine chances for equip upgrades
 	return true;
 }
 bool CWorldServer::LoadNPCData()
@@ -803,6 +806,7 @@ bool CWorldServer::LoadMonsters()
 	return true;
 }
 
+/*
 bool CWorldServer::LoadUpgrade()//for succes rate
 {
 	Log(MSG_LOAD, "Refine Data      ");
@@ -822,6 +826,33 @@ bool CWorldServer::LoadUpgrade()//for succes rate
         upgrade[GetUIntValue(",",&line)] = GetUIntValue(",");
     }
     fclose(fh);
+	return true;
+}
+*/
+
+//PY: Loading upgrade chances for refining equipment
+bool CWorldServer::LoadRefineChances( )
+{
+	Log( MSG_LOAD, "UpGrades - STB   " );
+    for(unsigned int i=0;i<ListUpGrade.rowcount;i++)
+    {
+		UpGradeList[i].BindLevel = ListUpGrade.rows[i][0];
+		UpGradeList[i].BindSuccess = ListUpGrade.rows[i][1];
+		UpGradeList[i].TaliLevel = ListUpGrade.rows[i][2];
+		UpGradeList[i].TaliSuccess = ListUpGrade.rows[i][3];
+	}
+	//hard coding them because this shit above isn't playing the game right now
+	//UpGradeList[0].BindSuccess = 0;
+	//UpGradeList[1].BindSuccess = 100;
+	//UpGradeList[2].BindSuccess = 100;
+	//UpGradeList[3].BindSuccess = 100;
+	//UpGradeList[4].BindSuccess = 70;
+	//UpGradeList[5].BindSuccess = 50;
+	//UpGradeList[6].BindSuccess = 30;
+	//UpGradeList[7].BindSuccess = 30;
+	//UpGradeList[8].BindSuccess = 20;
+	//UpGradeList[9].BindSuccess = 20;
+	Log( MSG_LOAD, "UpGrades  Loaded - STB   " );
 	return true;
 }
 
