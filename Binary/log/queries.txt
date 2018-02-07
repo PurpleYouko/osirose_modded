@@ -306,3 +306,4 @@ INSERT INTO list_quest (owner, quests) VALUES(6,'\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
 UPDATE accounts SET zulystorage = 0 WHERE id = 6
 UPDATE accounts SET online=false where id=6
 UPDATE accounts SET online=0 WHERE username=''
+SELECT @@wait_timeout
