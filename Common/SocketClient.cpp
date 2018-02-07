@@ -89,6 +89,7 @@ bool CClientSocket::ReceiveData( )
 #endif
    CPacket* pak = (CPacket*)&Buffer;
 	
+   /*
 	FILE *fh = fopen(  "log/receivedpackets.log", "a+" );
 	if ( fh != NULL ) {
 		fprintf( fh, "(SID:%08u) IN  %04x: ", sock, pak->Command );
@@ -96,6 +97,53 @@ bool CClientSocket::ReceiveData( )
 		fprintf( fh, "\n" );
 		fclose( fh );
 	}
+	*/
+
+
+	//LMA: Timestamp
+	//LMA: changing directory for packet logs.
+    time_t rtime;
+    time(&rtime);
+    char *timestamp = ctime(&rtime);
+    timestamp[ strlen(timestamp)-1 ] = ' ';
+
+	FILE *fh = NULL;
+	string ThisServer;
+	switch(LOG_THISSERVER)
+	{
+        case LOG_LOGIN_SERVER:
+	        ThisServer = "Login ";
+	        //fh = fopen( PLOG_DIRECTORY LOG_LOGINPACKETS, "a+" );
+        break;
+        case LOG_CHARACTER_SERVER:
+            ThisServer = "Char  ";
+	        //fh = fopen( PLOG_DIRECTORY LOG_CHARPACKETS, "a+" );
+        break;
+        case LOG_WORLD_SERVER:
+            ThisServer = "World ";
+            if( pak->Command==0x7ec || pak->Command==0x808 )
+                break;
+	        //fh = fopen( PLOG_DIRECTORY LOG_WORLDPACKETS, "a+" );
+        break;
+        case LOG_SAME_FILE:
+            ThisServer = "Same ";
+            if( pak->Command==0x7ec || pak->Command== 0x808 )
+                break;
+	        //fh = fopen( PLOG_DIRECTORY LOG_DEFAULTPACKETS, "a+" );
+        break;
+    }
+
+	fh = fopen("log/InOutPackets", "a+");
+
+    if ( fh != NULL )
+    {
+        //fprintf( fh, "(SID:%08u) IN %04x: ", sock, pak->Command );
+        fprintf( fh, "%s- %s IN  %04x %04x %04x : ",timestamp, ThisServer.c_str(), pak->Size, pak->Command, pak->Unused);
+        for ( int i=0; i<pak->Size-6; ++i )
+            fprintf( fh, "%02x ", (unsigned char)pak->Buffer[i] );
+        fprintf( fh, "\n" );
+        fclose( fh );
+    }
 	
 	// Handle actions for this packet
 	if ( !GS->OnReceivePacket( this, pak ) )
